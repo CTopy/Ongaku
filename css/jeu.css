@@ -1,0 +1,22 @@
+@font-face {
+    font-family: "New Athletic";
+    src : url(/medias/fonts/New Athletic M54);
+}
+
+/********************* GENERAL **************************/
+body {
+    margin : 0;
+}
+
+main {
+    display : flex;
+}
+
+/********************** PLAYER ***************************/
+
+iframe {
+    border-radius : 100000px;
+}
+
+/********************** PAROLES *******************************/
+
