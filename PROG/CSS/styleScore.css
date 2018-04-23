@@ -1,41 +1,91 @@
+@font-face {
+    font-family: 'New Athletic M54';
+    src: url('../FONT/New Athletic M54.ttf')
+}
 
+body {
+    background-color: whitesmoke;
+    background: url(../IMAGES/background/backgroundResultat.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: #D6D6D6
+}
 
-main{
-   width: 75vw;
-    min-width: 1000px;
+main {
+    width: 75vw;
+    min-width: 640px;
     height: 80vh;
-    min-height: 600px;
+    min-height: 360px;
     margin-left: auto;
     margin-right: auto;
     padding: 5px;
+    font-family: New Athletic M54;
+
 }
 
-
-.logoJoueur{
-    
-    
-    
+.numero1 {
+    display: flex;
+    justify-content: space-around;
+    font-size: 100px;
 }
 
-
-
-#progress{
-    width: 300px;
+.numero1 p{
     margin: auto;
 }
-progress{
-    display: inline-block;
-    -moz-box-sizing: border-box;
-         box-sizing: border-box;
-    width: 300px;
-    height: 20px;
-    padding: 3px 3px 2px 3px;
-    background: #333; 
-    background: -webkit-linear-gradient(#2d2d2d,#444);
-    background:    -moz-linear-gradient(#2d2d2d,#444);
-    background:      -o-linear-gradient(#2d2d2d,#444);
-    background:         linear-gradient(#2d2d2d,#444);
-    border: 1px solid rgba(0,0,0,.5);
-    border-radius: 15px;
-    box-shadow: 0 1px 0 rgba(255,255,255,.2);   
+
+.logoJoueur {
+    height: 100px;
+    margin: auto;
 }
+
+.progress-bar {
+    margin: auto;
+    width: 50vw;
+    height: 24px;
+    background-color: white;
+    border: solid 5px #D5D6D7;
+    border-radius: 10px;
+
+}
+
+.progress-bar::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 200px;
+    height: 24px;
+    background: #80DDB3;
+    border-radius: 6px;
+
+}
+
+.scoreJoueur {
+    font-size: 40px;
+    margin: auto;
+}
+
+
+
+.radial-gradient {
+
+    background-image: radial-gradient(farthest-corner at 50% 50%,
+    rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 50%);
+}
+
+.RRQ {
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.RRQ p{
+    background-color: white;
+
+    border-radius: 5px;
+    padding: 4px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 24px;
+}
+
