@@ -1,0 +1,28 @@
+@font-face {
+font-family: 'New Athletic';
+src: url('../font/new_athletic_m54/New Athletic M54.ttf');
+}
+
+html {
+    background-image: url(../images/backgroundAccueil.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body {
+    font-family: 'New Athletic';
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family : 'New Athletic';
+}
+
+h1 {
+    font-size: 100px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+/* Pour les plus petites ecriture utilisez les balises <h3> et <h4> elles sont au bon format de base*/
