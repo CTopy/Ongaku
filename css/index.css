@@ -44,7 +44,7 @@ h1::before {
     display : block;
     position: absolute;
     top: calc(50% - 0.8em);
-    left: calc(-50% - 0.1em);
+    left: calc(-50% - 0.3em);
 }
 
 h1::after {
