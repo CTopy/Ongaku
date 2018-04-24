@@ -18,10 +18,10 @@
         <div class="infosTitre">
             <div id="player">
                 <span id="timer"></span>
-                <iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=square&autoplay=true&playlist=false&width=300&height=300&color=007FEB&layout=dark&size=medium&type=tracks&id=109374130&app_id=1" width="500" height="500"></iframe>
+                <iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=square&autoplay=true&playlist=false&width=300&height=300&color=007FEB&layout=dark&size=medium&type=tracks&id=109374136&app_id=1" width="500" height="500"></iframe>
             </div>
             <div>
-                <span id="titre">We're the Gangstalkers</span>
+                <span id="titre"><?php ?></span>
                 <span id="auteur">Rusty Cage</span>
             </div>
         </div>
