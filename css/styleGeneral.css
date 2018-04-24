@@ -1,6 +1,6 @@
 @font-face {
-font-family: 'New Athletic';
-src: url('../font/new_athletic_m54/New Athletic M54.ttf');
+font-family: 'New Athletic M54';
+src: url('../medias/fonts/New Athletic M54.ttf');
 }
 
 html {
@@ -10,11 +10,11 @@ html {
 }
 
 body {
-    font-family: 'New Athletic';
+    font-family: 'New Athletic M54';
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family : 'New Athletic';
+    font-family : 'New Athletic M54';
 }
 
 h1 {
