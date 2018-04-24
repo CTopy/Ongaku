@@ -65,7 +65,7 @@ h1::before{
     margin: auto;
 }
 
-.progress-bar {
+.barreResultat {
     margin: auto;
     width: 50vw;
     height: 24px;
@@ -75,7 +75,7 @@ h1::before{
 
 }
 
-.progress-bar::before {
+.barreResultat::before {
     content: '';
     display: block;
     position: absolute;
@@ -93,19 +93,19 @@ h1::before{
 
 
 
-.radial-gradient {
+.ombreBarre {
 
     background-image: radial-gradient(farthest-corner at 50% 50%,
     rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 50%);
 }
 
-.RRQ {
+.revancheRejouerQuitter {
     display: flex;
     justify-content: space-around;
     
 }
 
-.RRQ p{
+.revancheRejouerQuitter p{
     background-color: white;
 
     border-radius: 5px;
