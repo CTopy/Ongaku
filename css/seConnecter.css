@@ -25,6 +25,7 @@ body {
 }
 
 h1 {
+    position: relative;
 }
 
 fieldset {
@@ -55,7 +56,7 @@ fieldset::before {
     width: 80px;
     height: 80px;
     border-radius: 80px;
-    background-color: #7cffa4;
+    background-color: #5FD7A2;
     border: none;
     background-image: url(../medias/images/flecheBouton.png);
     background-size: 70%;
@@ -86,4 +87,18 @@ input:first-child::before {
     top : -70px;
     left : 58%;
     transform : rotate(36deg);
+}
+h1::after {
+    content:"";
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    background: url(../medias/images/PiqueAccueil.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    top: -130px;
+    left: 89%;
+    transform: rotate(-5deg);
+    
 }
