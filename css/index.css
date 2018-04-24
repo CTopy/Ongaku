@@ -1,42 +1,25 @@
-@font-face {
-font-family: 'New Athletic M54';
-src: url('../font/new_athletic_m54/New Athletic M54.ttf');
-}
-
-html {
+html, body, h1, h2 {
     margin: 0;
     padding: 0;
 }
 
 body {
     background: url(../medias/images/backgroundAccueil.png) no-repeat center fixed;
-    background-size: cover;
+    background-size: contain;
     font-family: 'New Athletic M54';
     margin: 0;
     padding: 0;
-}
-
-h1 {
-    font-size: 100px;
-    padding: 0;
-    margin: 0;
-    position : relative;
+    background-color : #DCDDDE;
 }
 
 h2 {
-    font-size: 40px;
     padding-left: 100px;
-    margin: 0;
-}
-
-h1,
-h2 {
-    transform: rotate(-10deg);
 }
 
 a {
     text-decoration: none;
     color: black;
+    transform: rotate(-10deg);
 }
 
 main {
@@ -44,7 +27,7 @@ main {
     text-align: center;
     display: flex;
     width: 100vw;
-    height: 120vh;
+    height: 100vh;
     align-items: center;
     flex-direction: column;
     justify-content: center;
@@ -73,6 +56,6 @@ h1::after {
     height: 150px;
     display : block;
     position: absolute;
-    top: calc(50% - 1.4em);
-    left: calc(-50% - -3.2em);
+    top: calc(50% - 1.7em);
+    left: calc(-50% + 3.3em);
 }
