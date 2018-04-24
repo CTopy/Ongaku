@@ -39,7 +39,7 @@ nav {
 }
 
 header .menuDeroulant {
-        padding: 0;
+    padding: 0;
     list-style-type: none;
     text-align: center;
     transform: scaleY(0.5);
@@ -48,7 +48,7 @@ header .menuDeroulant {
     opacity: 0;
 }
 
-.apparaitre {
+ .apparaitre {
     background-color: #DCDDDE;
     opacity: 1;
     transform: scaleY(1);
