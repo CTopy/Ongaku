@@ -19,30 +19,36 @@ body{
     background-color: white;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
-    margin : 0;
     height: 60px;
     
     
+    
 }
 
-#deroulant{
+.iconeDeroulant{
     width:50px;
-    padding-bottom:10px;
+    margin-top:7px;
+    margin-left: 30px;
+  
+   
 }
 
-#logoMembre{
+.iconeMembre{
     width:60px;
+    
 }
 
-#logoChat{
+.iconeChat{
     width:50px;
     padding-bottom:10px;
     margin-right: 10px;
 }
 
-#ongaku{
+.titreOngaku{
     width:250px;
+    padding-left: 40px;
     padding-top: 10px;
+    
 }
 
 div a+a{
@@ -60,6 +66,11 @@ a{
    
 }
 
+nav{
+    position:absolute;
+    top:30px;
+    left:20px;
+}
 
 nav ul{
     padding: 0;
@@ -67,7 +78,7 @@ nav ul{
     text-align: center;
 }
 
-.transitionMenu>li ul{
+.menuDeroulant {
     transform: scaleY(0.5);
     transform-origin: top;
     border-radius:10px;
@@ -76,22 +87,20 @@ nav ul{
     
 }
 
-.transitionMenu ul{
+.menuDeroulant{
     opacity : 0;
 }
     
- .transitionMenu>li:hover ul{
-    background-color:  #DCDDDE;
+ .menuDeroulant:hover {
+    background-color: #DCDDDE;
     width: 130px;
     opacity:1;
     transform: scaleY(1);
-
-   
     transition-duration: 1s, 500ms;
     transition-delay: 0, 1s, ;
         }
     
-.menuDeroulant > li{
+.menuDeroulant>li{
     background-color:darkgrey;
     border-radius: 7px;
     width:90%;
