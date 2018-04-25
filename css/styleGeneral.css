@@ -4,12 +4,15 @@ src: url("../medias/fonts/New Athletic M54.ttf");
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 html {
    /* background-image: url(../images/backgroundAccueil.png);*/
     background-repeat: no-repeat;
     background-size: cover;
 }
 =======
+=======
+>>>>>>> seConnecter
 /* Vous DEVEZ intégrer cette feuille de style à votre page HTML 
 grâce à la balise suivante que vous avez juste à copier/coller
 
@@ -21,7 +24,10 @@ le @font-face qu'on ne doit PAS remettre dans les autres pages etc.
 Si à un moment du code vous avez besoin de copier/coller un
 morceau vers une autre page, alors c'est que ce morceau DOIT
 être collé ICI, et pas ailleurs. Merci */
+<<<<<<< HEAD
 >>>>>>> CreerUnCompteDebut
+=======
+>>>>>>> seConnecter
 
 body {
     font-family: 'New Athletic M54';
