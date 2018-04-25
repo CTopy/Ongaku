@@ -1,8 +1,40 @@
+"use strict";
 document.addEventListener("DOMContentLoaded", init);
 
 var tempsRestant = 60;
+var IdMusique, NomMusique, NomAuteur, TexteATrous, IdParoles;
+
+function reqListener() {
+    console.log(this.responseText);
+}
 
 function init(evt) {
+    var lienIframe = "https://www.deezer.com/plugins/player?format=square&autoplay=true&playlist=false&width=300&height=300&color=007FEB&layout=dark&size=medium&type=tracks&id=&app_id=1";
+
+    //On envoie une requête HTTP à l'aide d'AJAX à la page jeu_process.php
+    $.ajax({
+        type: "POST",
+        url: "jeu_process.php",
+        data: {} // the param to send to your file, 
+        success: function (var msg) {; // msg is the result of your 'myfile.php', everything you write is in the msg var
+
+        }
+    });
+
+    //Récupérer les données de la page PHP
+    var oReq = new XMLHttpRequest(); //New request object
+    oReq.onload = function () {
+        
+        //This is where you handle what to do with the response.
+        //The actual data is found on this.responseText
+        alert(this.responseText); //Will alert: 42 
+    };
+    oReq.open("get", "get-data.php", true);
+    //                               ^ Don't block the rest of the execution.
+    //                                 Don't wait until the request finishes to 
+    //                                 continue.
+    oReq.send();
+
     //Ajouter un écouteur qui vérifie si on presse une touche
     document.getElementById("saisieUser").addEventListener("keyup", testEnter);
 
@@ -31,8 +63,23 @@ function testEnter(event) {
 //Cette fonction s'active lorsqu'on appuie sur entrée. La valeur saisie est stockée,
 //et la valeur du champ effacée.
 function buttonCode() {
-    var saisieUtilisateur = document.getElementById('saisieUser').value;
+    var saisieUtilisateur = $('#saisieUser').val();
     document.getElementById("saisieUser").value = "";
+    document.getElementsByTagName[0].dataset.idparoles;
+
+    $.ajax({
+        type: "POST",
+        url: "myfile.php",
+        data: {
+            saisieUser: saisieUtilisateur,
+
+
+        } // the param to send to your file, 
+        success: function (msg) {; // msg is the result of your 'myfile.php', everything you write is in the msg var
+
+        }
+    });
+    return false;
 }
 
 //Cette fonction met à jour la variable globale tempsRestant et affiche le timer
@@ -62,4 +109,3 @@ function stringTemps(temps) {
 /////////////////////////////////////////////////////////////////
 //FONCTION D'ADAPTATION AUTO DU TEXTE A LA DIV
 ////////////////////////////////////////////////////////////////
-
