@@ -1,0 +1,116 @@
+@font-face {
+    font-family: 'New Athletic M54';
+    src: url('./medias/fontsNew Athletic M54.ttf')
+}
+
+body {
+
+    background: url(../medias/images/background/backgroundAccueil.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: #DCDDDE
+}
+
+main {
+    width: 75vw;
+    min-width: 640px;
+    height: 80vh;
+    min-height: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    font-family: New Athletic M54;
+
+}
+
+h1 {
+    font-size: 100px;
+    position: relative;
+    padding-left: 130px;
+    margin-top: 100px;
+}
+
+h1::before {
+    content: "";
+    background: url(../medias/images/Elements/FlecheVerte.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    display: block;
+    position: absolute;
+
+    height: 150%;
+    width: 100%;
+
+    left: -2%;
+    top: -21%
+}
+
+.numero1 {
+    display: flex;
+    justify-content: space-around;
+    font-size: 100px;
+}
+
+.numero1 p {
+    margin: auto;
+}
+
+.logoJoueur {
+    height: 100px;
+    margin: auto;
+}
+
+.barreResultat {
+    margin: auto;
+    width: 50vw;
+    height: 24px;
+    background-color: white;
+    border: solid 5px #D5D6D7;
+    border-radius: 10px;
+
+}
+
+.barreResultat::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 40vw;
+    height: 24px;
+    background: #80DDB3;
+    border-radius: 6px;
+
+}
+
+.scoreJoueur {
+    font-size: 40px;
+    margin: auto;
+}
+
+
+
+.ombreBarre {
+
+    background-image: radial-gradient(farthest-corner at 50% 50%,
+    rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 50%);
+}
+
+.revancheRejouerQuitter {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.revancheRejouerQuitter a {
+    background-color: white;
+
+    border-radius: 5px;
+    padding: 4px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 24px;
+
+    text-decoration: none;
+    color: black;
+}

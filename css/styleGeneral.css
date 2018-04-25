@@ -1,5 +1,6 @@
 @font-face {
 font-family: 'New Athletic M54';
+<<<<<<< HEAD
 src: url("../medias/fonts/New Athletic M54.ttf");
 }
 
@@ -28,6 +29,16 @@ morceau vers une autre page, alors c'est que ce morceau DOIT
 >>>>>>> CreerUnCompteDebut
 =======
 >>>>>>> seConnecter
+=======
+src: url('../medias/fonts/New Athletic M54.ttf');
+}
+
+html {
+    background-image: url(../images/backgroundAccueil.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+>>>>>>> score
 
 body {
     font-family: 'New Athletic M54';
@@ -45,6 +56,7 @@ h2 {
     font-size: 40px;
 }
 
+<<<<<<< HEAD
 input[type="text"] {
     font-family: 'New Athletic M54';
     font-size: 20px;
@@ -53,3 +65,6 @@ input[type="text"] {
     border-radius: 10px;
     border: white 5px solid;
 }
+=======
+/* Pour les plus petites ecriture utilisez les balises <h3> et <h4> elles sont au bon format de base*/
+>>>>>>> score
