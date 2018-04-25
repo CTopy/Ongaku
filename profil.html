@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Profil du joueur</title>
     <meta name="description" content="Affichage du profil du joueur">
-    <link rel="stylesheet" href="../CSS/styleProfil.css">
+    <link rel="stylesheet" href="./css/styleProfil.css">
 
 </head>
 
@@ -28,6 +28,7 @@
 
 
         <a href="ami.html">amis</a>
+        <!-- changer lien  -->
 
         <div class="casesARemplir">
 
@@ -38,8 +39,8 @@
 
             <div class="mettrePhoto">
                 <label for="boutonPhoto">mettre une photo</label>
-                <input type="button" id="boutonPhoto" name="mettrePhoto">
-                <img class="logoJoueur" src="../IMAGES/logoFeminin.png" alt="Logo joueur basique">
+                <input type="button" id="boutonPhoto" value="mettre une photo" name="mettrePhoto">
+                <img class="logoJoueur" src="./medias/images/logoFeminin.png" alt="Logo joueur basique">
             </div>
 
             <div class="changerMail">
@@ -51,7 +52,7 @@
                 <label for="mdp">changer de mot passe</label>
                 <input type="text" id="mdp" name="nvMdp">
             </div>
-            
+
             <div class="changerMailConf">
                 <label class="confirmer" for="confMail">confirmer</label>
                 <input type="text" id="confMail" name="confNvMail">
@@ -66,45 +67,49 @@
 
         <div class="caseACocher">
 
-            <div class="afficherMailEtAmis">
+            <div class="afficherLeMail">
 
-                <div class="afficherLeMail">
+                <h2>afficher le mail</h2>
 
-                    <input type="radio" name="mail" value="yes" id="mailoui" /> <label for="mailoui">oui</label>
+                <div class="ouiNonMail">
+                    <div>
 
-                    <input type="radio" name="mail" value="no" id="mailnon" /> <label for="mailnon">non</label>
-
+                        <input type="radio" name="mail" value="yes" id="mailoui" />
+                        <label for="mailoui">oui</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="mail" value="no" id="mailnon" />
+                        <label for="mailnon">non</label>
+                    </div>
                 </div>
-
-                <div class="AfficherLaListeDAmis">
-
-                    <input type="radio" name="ami" value="oui" id="amioui" /> <label for="amioui">oui</label>
-
-                    <input type="radio" name="ami" value="non" id="aminon" /> <label for="aminon">non</label>
-
-                </div>
-
 
             </div>
 
-            <div class="sexe">
+            <div class="AfficherLaListeDAmis">
 
-                <input type="radio" name="sexe" value="homme" id="caseHomme" /> <label for="caseHomme">masculin</label>
+                <h2>afficher la liste d'amis</h2>
 
-                <input type="radio" name="sexe" value="femme" id="caseFemme" /> <label for="caseFemme">feminin</label>
+                <div class="ouiNonAmis">
+                    <div class="amisOui">
+                        <input type="radio" name="ami" value="oui" id="amioui" />
+                        <label for="amioui">oui</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="ami" value="non" id="aminon" />
+                        <label for="aminon">non</label>
+                    </div>
+
+                </div>
 
             </div>
+
 
         </div>
 
-
-
     </main>
 
-
     <footer>
+
     </footer>
-
-
 
 </body>
