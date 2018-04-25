@@ -63,28 +63,10 @@ fieldset input{
     opacity: 0.6;
     
 }
-.GO {
-    margin : 0;
-    padding : 0;
-    width: 70px;
-    height: 70px;
-    border-radius: 80px;
-    background-color: #5FD7A2;
-    border: none;
-    background-image: url(../medias/images/flecheBouton.png);
-    background-size: 60%;
-    background-position: 15px center;
-    background-repeat: no-repeat;
-    position : relative;
-    left : calc(100% + 60px);
-    box-shadow: 2px 2px rgba(0, 0, 0, 0.5),;
-    bottom:120px;
-    transform: rotate(20deg);
-}
 
 .boutonGo{
     position: absolute;
-    top: 478px;
+    top: 48px;
     left: 380px;
     transform: rotate(20deg);
     font-size: 50px;
@@ -110,4 +92,10 @@ div{
 input+label{
     margin-left:-50px;
 }
+
+.boutonGo::before {
+    background-image: url(../medias/images/flecheBouton.png);
+}
+    
+
     
