@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded",initialiser);
     
 function cliquer(evt){
     var imageClique = this;
-    document.getElementsById("menuDeroulant").classList.add("apparaitre") ;
+    document.getElementsById("menuDeroulant").classList.toggle("apparaitre") ;
     /*this.removeEventListener("click", cliquer); */
    
     
