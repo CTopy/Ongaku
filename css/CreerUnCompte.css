@@ -73,6 +73,11 @@ fieldset input{
     background-color: #DCDDDE;
     font-family: 'New Athletic M54';
     border:none;
+    background-image:url("../medias/images/boutonRondVert.png");
+    background-repeat: no-repeat;
+    padding-left: 60px;
+    padding-bottom: 10px;
+    top:480px;
     
 }
 
@@ -93,9 +98,7 @@ input+label{
     margin-left:-50px;
 }
 
-.boutonGo::before {
-    background-image: url(../medias/images/flecheBouton.png);
-}
+
     
 
     
