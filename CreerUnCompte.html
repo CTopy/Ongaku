@@ -1,11 +1,10 @@
 <!DOCTYPE HTML>
-
 <html lang="fr">
 
 <head>
-    <title>Ongaku - CreerUnCompte</title>
     <meta charset="utf-8">
-    <meta type="description" content="Creer un compte sur Ongaku pour pouvoir profiter de toutes les fonctionnalitées du jeu !" />
+    <title>Ongaku - CreerUnCompte</title>
+    <meta name="description" content="Creer un compte sur Ongaku pour pouvoir profiter de toutes les fonctionnalitées du jeu !" />
     <link rel="stylesheet" href="css/CreerUnCompte.css" type="text/css" />
     <link rel="stylesheet" href="css/styleGeneral.css" />
 </head>
@@ -14,9 +13,9 @@
     <main>
         <h1>CREER UN COMPTE</h1>
         <fieldset>
-            <input type="text" name="pseudo" placeholder="PSEUDO" />
-            <input type="text" name="email" placeholder="EMAIL" />
-            <input type="text" name="confirmeremail" placeholder="CONFIRMER VOTRE EMAIL" />
+            <input type="text" name="pseudo" placeholder="PSEUDO" required/>
+            <input type="email" name="email" placeholder="EMAIL" required/>
+            <input type="email" name="confirmeremail" placeholder="CONFIRMER VOTRE EMAIL" required/>
             
             <div> 
                 <input id="masculin" type="radio" name="sexe"/>
@@ -27,18 +26,15 @@
                 
             </div>
             
-            <input type="text" name="mdp" placeholder="MOT DE PASSE" />
-            <input type="text" name="confirmermdp" placeholder="CONFIRMER LE MOT DE PASSE" />
-            <input type="file" value="AVATAR" href="" class="Avatar" /> 
-            <button type="image" value="" href="" class="ImageAvatar"></button>
+            <input type="password" name="mdp" placeholder="MOT DE PASSE" required/>
+            <input type="password" name="confirmermdp" placeholder="CONFIRMER LE MOT DE PASSE" required/>
+            <input type="file" name="AVATAR" class="Avatar" /> 
+            <p class="ImageAvatar"></p>
             
             <input type="submit" name="conform" value="GO" class="boutonGo"/>
             
-            
-            
-            
-            
-            
+                        
         </fieldset>
     </main>
 </body>
+</html>
