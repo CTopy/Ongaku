@@ -1,25 +1,15 @@
-html, body, h1, h2 {
+html, body{
     margin: 0;
     padding: 0;
 }
 
 body {
-    background: url(../medias/images/backgroundAccueil.png) no-repeat center fixed;
+    background: url(../medias/images/backgroundAccueil.jpeg) no-repeat center fixed;
     background-size: contain;
     font-family: 'New Athletic M54';
     margin: 0;
     padding: 0;
     background-color : #DCDDDE;
-}
-
-h2 {
-    padding-left: 100px;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-    transform: rotate(-10deg);
 }
 
 main {
@@ -34,28 +24,57 @@ main {
     position: relative;
 }
 
-h1::before {
-    content : "";
-    background : url(../medias/images/FlecheVerteAccueil.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    width : 150px;
-    height: 150px;
-    display : block;
-    position: absolute;
-    top: calc(50% - 0.8em);
-    left: calc(-50% - 0.3em);
+
+.jouer{
+    position:relative;
+    z-index: 2;
+    height: 65vh;
+    
+    
+ 
+    
+   
 }
 
-h1::after {
+.disque{
+    position:absolute;
+    z-index: 1;
+    top : 10vh;
+    left: calc((100vw - 80vh)/ 2);
+    height: 80vh;
+ 
+    
+}
+
+
+
+/*#play::before {
     content : "";
-    background : url(../medias/images/PiqueAccueil.png);
+    background : url(../medias/images/casqueAccueil.png);
     background-size: contain;
     background-repeat: no-repeat;
-    width : 150px;
-    height: 150px;
+    width : 1000px;
+    height: 1000px;
     display : block;
-    position: absolute;
-    top: calc(50% - 1.7em);
-    left: calc(-50% + 3.3em);
+    position: flex;
+    top: calc(50% - 8em);
+    left: calc(-50% - 10em);
+}
+
+
+
+
+.animation {
+    animation: tourner 0.8s linear infinite; 
+    
+}
+    @keyframes tourner {
+    0% {
+        transform: rotate(0deg); 
+    }
+
+    100% {
+        
+        transform: rotate(360deg); 
+    }
 }
