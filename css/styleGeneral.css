@@ -40,8 +40,8 @@ h2 {
 }
 
 <<<<<<< HEAD
-input[type="text"] {
-    font-family: 'New Athletic M54';
+input[type="text"], input[type="email"], input[type="password"] {
+    font-family: 'Rajdhani-Bold';
     font-size: 20px;
     padding: 10px 0px 10px 10px;
     background-color: #DCDDDE;
