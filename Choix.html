@@ -12,43 +12,52 @@
 
 <body>
     <main>
-        <div class="selection">
-            <div id="Jeu" class="fond">
-                <h3>jeu</h3>
-                <p>PAROLES</p>
-            </div>
+        <form method="post">
+            <fieldset id="jeu">
+                <legend>JEU</legend>
+                <label for="classique">CLASSIQUE</label>
+                <input type="radio" name="jeu" value="classique" />
 
-            <div id="Style" class="fond">
-                
-                    <input id="barre" type="text" name="recherche" placeholder="RECHERCHE" />
-                
-                <h3>style</h3>
-                <ul>
-                    <li>POP</li>
-                    <li>ROCK</li>
-                    <li>METAL</li>
-                    <li>RAP</li>
-                    <li>COUNTRY</li>
-                    <li>FOLK</li>
-                </ul>
+                <label for="chrono">CHRONO</label>
+                <input type="radio" name="jeu" value="classique" />
+            </fieldset>
 
+            <fieldset id="genre">
+                <legend>GENRE</legend>
+                <label for="pop">POP</label>
+                <input type="radio" name="genre" value="pop" />
 
-            </div>
+                <label for="rock">ROCK</label>
+                <input type="radio" name="genre" value="rock" />
 
-            <div id="Language" class="fond">
-                <h3>langues</h3>
-                <input id="Anglais" type="checkbox" name="language" />
-                <label for="Anglais">Anglais</label>
-                <input id="Francais" type="checkbox" name="language" />
-                <label for="Francais">Francais</label>
-                <input id="Espagnol" type="checkbox" name="language" />
-                <label for="Espagnol">Espagnol</label>
-            </div>
+                <label for="metal">METAL</label>
+                <input type="radio" name="genre" value="metal" />
 
-            <div id="Logo" >
-                <img src="medias/images/Elements/boutonChoix.png">
-            </div>
-            </div>
+                <label for="rap">RAP</label>
+                <input type="radio" name="genre" value="rap" />
+
+                <label for="country">COUNTRY</label>
+                <input type="radio" name="genre" value="country" />
+
+                <label for="folk">FOLK</label>
+                <input type="radio" name="genre" value="folk" />
+            </fieldset>
+            
+            <fieldset id="langue">
+                <legend>LANGUE</legend>
+                <label for="pop">FRANCAIS</label>
+                <input type="radio" name="langue" value="FRA" />
+
+                <label for="rock">ANGLAIS</label>
+                <input type="radio" name="langue" value="ANG" />
+
+                <label for="metal">ESPAGNOL</label>
+                <input type="radio" name="langue" value="ESP" />
+            </fieldset>
+
+            <input type="image" src="medias/images/Elements/boutonChoix.png" height="300" width="300" alt="Valider" />
+
+        </form>
 
     </main>
 </body>
