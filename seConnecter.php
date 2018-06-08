@@ -1,24 +1,36 @@
-<?php
+<?php 
+
   ini_set('session.use_trans_sid', true);
   ini_set('session.use_cookies', true);        
   ini_set('session.use_only_cookies', false);
   session_start();
-  require("entete.inc.php");
 
+?>
 
-  require("param.inc.php");
-  $pdo=new PDO("mysql:host=".MYHOST.";dbname=".MYDB, MYUSER, MYPASS) ;
-if(isset($_POST["envoi"]) && $_POST["envoi"]=="verifier") {
-   
-    $requete = "SELECT PseudoJoueur,MdpJoueur FROM JOUEURS WHERE PseudoJoueur='".addslashes($_POST["email"])."' AND MdpJoueur='".addslashes($_POST["motDePasse"])."'";
-?>
-    <script type="text/javascript">
-        window.location = '  ---METTRE LIEN PAGE---  ?PHPSESSID=<?php echo(session_id()); ?>'
-    </script>
-    <?php
-  }
-  else {
-?>
-        <script type="text/javascript">alert('Erreur de saisie');</script>
-        <?php
-  }
+<!DOCTYPE HTML>
+
+<html lang="fr">
+
+<head>
+    <title>Ongaku - Se connecter</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="Se connecter à Ongaku ! pour pouvoir profiter de tous les avantages membres !" />
+    <link rel="stylesheet" href="css/seConnecter.css" type="text/css" />
+    <link rel="stylesheet" href="css/styleGeneral.css" />
+</head>
+
+<body>
+    <main>
+        <h1>SE CONNECTER</h1>
+        <form action="verifConnexion.php" method="post">
+            <fieldset>
+                <input type="text" name="email" placeholder="EMAIL" />
+                <input type="password" name="motDePasse" placeholder="MOT DE PASSE" />
+                <input type="submit" name="envoi" value="verifier" class="btnValider">
+            </fieldset>
+        </form>
+        <a href="">Mot de passe oublié ?</a>
+    </main>
+</body>
+
+</html>
