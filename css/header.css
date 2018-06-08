@@ -1,0 +1,100 @@
+/*************************commun aux 2 headers******************************/
+
+h1, header, nav {
+    margin: 0;
+    padding: 0;
+   
+}
+
+header>img {
+    height: 50px;
+    object-fit: contain;
+}
+
+header .iconeMembre {
+    width: 60px;
+}
+
+header div a:first-child img {
+    width: 50px;
+}
+
+header h1 {
+    margin: 0;
+    padding: 0;
+    font-family: 'New Athletic M54';
+    transform: scaleY(0.5);
+}
+
+header a {
+    text-align: center;
+    padding-left: 0;
+    text-decoration: none;
+    color : black;
+}
+
+nav {
+    position: absolute;
+    left : 20px;
+    bottom:-65px;
+    /*bottom : calc(-70px - 20px);*/
+}
+
+header .menuDeroulant {
+    padding: 3px;
+    list-style-type: none;
+    text-align: center;
+    transform: translateY(-1000px);
+    transform-origin: top;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+.apparaitre {
+    background-color: #DCDDDE;
+    opacity: 1 !important;
+    transform: translateY(20px) !important;
+    transition-property: transform, opacity, background-color;
+    transition-duration: 0.2s;
+}
+
+.menuDeroulant li {
+    background-color: darkgrey;
+    border-radius: 7px;
+    margin-top:1px;
+    margin-bottom: 1px;
+    
+}
+
+header {
+    display: flex;
+    background-color: white;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "New Athletic M54";
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    margin: 0;
+    height: 70px;
+    padding : 0 30px 0 30px;
+    box-sizing: border-box;
+    position : relative;
+}
+
+div a + a {
+    margin-left : 10px;
+}
+
+header div {
+    display : flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header>img {
+    width : 50px;
+}
+
+#iconeMenu{
+   z-index: 1;
+}
