@@ -1,0 +1,55 @@
+body{
+    background-image: url(../medias/images/background/backgroundChoix.jpeg);
+}
+fieldset {
+    display : flex;
+    flex-direction : column;
+}
+
+[type="radio"] {
+    display : none;
+}
+
+form {
+    display : grid;
+    height: 98vh;
+    width: 99vw;
+    
+}
+
+#jeu, #genre {
+    grid-row : 1;
+    width: 40vw;
+    height: 30vh;
+    margin-left: 50px;
+    font-family: 'New Athletic M54';
+    font-size: 30px;
+    background-color: rgba(117,117,117,0.57);
+    border-radius: 20px;
+    
+}
+
+#langue, [type="image"] {
+    grid-row : 2;
+    
+}
+#langue {
+    width: 40vw;
+    height: 30vh;
+    margin-left: 50px;
+    font-family: 'New Athletic M54';
+    font-size: 30px;
+    background-color: rgba(117,117,117,0.57);
+    border-radius: 20px;
+}
+[type="image"]{
+    width: 25vw;
+    height: 35vh;
+    margin-left: 150px;
+    
+    
+}
+
+
+
+
