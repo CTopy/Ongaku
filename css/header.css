@@ -123,3 +123,7 @@ header>img {
 header h1 a {
     padding-right: 110px;
 }
+
+#reseaux{
+    z-index : 1000000;
+}
