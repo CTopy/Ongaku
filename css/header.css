@@ -1,6 +1,6 @@
 /*************************commun aux 2 headers******************************/
 
-h1, header, nav, body, html {
+header, nav, body, html {
     margin: 0;
     padding: 0;
    
@@ -22,6 +22,10 @@ header .iconeMembre {
 
 header div a:first-child img {
     width: 50px;
+}
+
+.facebook{
+    width: 49.5px;
 }
 
 header h1 {
@@ -83,7 +87,7 @@ header {
     margin: 0;
     height: 70px;
     padding : 0 30px 0 30px;
-    box-sizing: border-box;
+    box-sizing:border-box;
     position : relative;
 }
 
@@ -102,5 +106,23 @@ header>img {
 }
 
 #iconeMenu{
-   z-index: 1;
+   z-index: 100;
+    width:60px;
+}
+
+
+.reseaux a+a{
+    margin-left : 0px;
+}
+
+.twitter{
+    padding-left: 10px;
+}
+
+header #h11 a {
+    padding-right: 45px;
+}
+
+header #h12 a {
+    padding-right: 110px;
 }
