@@ -37,17 +37,20 @@ $pdo->query("SET CHARACTER SET 'utf-8'");
                     <?php
           
                     //Demander la liste des styles à la base de donnée
-            $requete = "SELECT IdStyle, LibelleStyle FROM STYLES"
+            $requete = "SELECT IdStyle, LibelleStyle FROM STYLES";
             $resultats = $pdo->query($requete);
-            $resultats = $paroles->fetch(PDO::FETCH_ASSOC);  
+                                            $ligne = $resultats->fetch(PDO::FETCH_ASSOC); 
                     
                     //Les afficher
-                    foreach ($resultats as $elt) {
+                    while ($ligne != false) {
                         ?>
-                    <input id="<?php echo($elt['IdStyle']) ?>" type="radio" name="style" value="<?php echo($elt['IdStyle']) ?>" />
-                    <label for="<?php echo($elt['IdStyle']) ?>"><?php echo($elt['LibelleStyle']) ?></label>
-                    
-                    <?php
+                        <input id="<?php echo($ligne['IdStyle']) ?>" type="radio" name="style" value="<?php echo($ligne['IdStyle']) ?>" />
+                        <label for="<?php echo($ligne['IdStyle']) ?>">
+                            <?php echo($ligne['LibelleStyle']) ?>
+                        </label>
+
+                        <?php
+                                                    $ligne = $resultats->fetch(PDO::FETCH_ASSOC); 
                     }
                     ?>
 
@@ -55,23 +58,27 @@ $pdo->query("SET CHARACTER SET 'utf-8'");
 
                 <fieldset id="langue">
                     <legend>LANGUE</legend>
-                    
+
                     <?php
           
                     //Demander la liste des styles à la base de donnée
-            $requete = "SELECT IdStyle, LibelleStyle FROM LANGUES"
+            $requete = "SELECT IdLangue, LibelleLangue FROM LANGUES";
             $resultats = $pdo->query($requete);
-            $resultats = $paroles->fetch(PDO::FETCH_ASSOC);  
+                                            $ligne = $resultats->fetch(PDO::FETCH_ASSOC); 
+             
                     
                     //Les afficher
-                    foreach ($resultats as $elt) {
+                    while ($ligne != false) {
                         ?>
-                    <input id="<?php echo($elt['IdLangue']) ?>" type="radio" name="style" value="<?php echo($elt['IdLangue']) ?>" />
-                    <label for="<?php echo($elt['IdLangue']) ?>"><?php echo($elt['LibelleLangue']) ?></label>
-                    
-                    <?php
+                        <input id="<?php echo($ligne['IdLangue']) ?>" type="radio" name="style" value="<?php echo($ligne['IdLangue']) ?>" />
+                        <label for="<?php echo($ligne['IdLangue']) ?>">
+                            <?php echo($ligne['LibelleLangue']) ?>
+                        </label>
+
+                        <?php
+                                                    $ligne = $resultats->fetch(PDO::FETCH_ASSOC); 
                     }
-                    pdo = null;
+                    $pdo = null;
                     ?>
                 </fieldset>
 
