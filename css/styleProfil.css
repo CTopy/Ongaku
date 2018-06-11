@@ -6,7 +6,7 @@
 }
 
 html {
-    background: url("../medias/images/background/backgroundProfil.png");
+    background: url("../medias/images/background/backgroundProfil.jpeg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
@@ -14,14 +14,14 @@ html {
 }
 
 main {
-    width: 75vw;
+    width: 100vw;
     min-width: 640px;
-    height: 80vh;
+    height: 100vh;
     min-height: 360px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 5px;
+    margin: 0;
+    padding: 0;
     font-family: New Athletic M54;
+    
 }
 
 h1 {
@@ -70,8 +70,38 @@ h1::before {
     position: absolute;
     top: -30px;
 }
+.caseARemplir div:nth-child(n + 2) label {
+    position: absolute;
+    top: -30px;
+}
 
-input[type=text] {
+input[type="text"] {
+    font-size: 40px;
+    font-family: Im Wunderland Bold;
+    border: solid white 3px;
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, .2);
+    border-radius: 20px;
+    background: #EBEBEB;
+    width: 80%;
+    justify-content: center;
+    height: 60px;
+    padding: 0px 0px 0px 10px;
+    margin: 0;
+}
+[type="email"]{
+    font-size: 40px;
+    font-family: Im Wunderland Bold;
+    border: solid white 3px;
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, .2);
+    border-radius: 20px;
+    background: #EBEBEB;
+    width: 80%;
+    justify-content: center;
+    height: 60px;
+    padding: 0px 0px 0px 10px;
+    margin: 0;
+}
+[type="password"] {
     font-size: 40px;
     font-family: Im Wunderland Bold;
     border: solid white 3px;
@@ -85,7 +115,8 @@ input[type=text] {
     margin: 0;
 }
 
-input[type=button] {
+
+input[type="file"] {
     font-size: 40px;
     font-family: New Athletic M54;
     color: #7FDDB3;
@@ -113,15 +144,11 @@ input[type=button] {
 
 
 .mettrePhoto {
-    color: #7FDDB3;
+    color:rgba(103, 103, 103, 0.7) ;
     width: 40%;
     justify-content: space-around;
     position: relative;
     font-size: 35px;
-}
-
-.mettrePhoto label {
-    display: none;
 }
 
 .mettrePhoto img {
@@ -130,28 +157,16 @@ input[type=button] {
     right: -30px;
 }
 
-.mettrePhoto::after {
-    content: "";
-    height: 150px;
-    width: 250px;
-    background: url(../medias/images/Elements/casque.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    display: block;
-    top: -30px;
-    right: -100px
-}
 
 .changerMail {
-    color: rgba(248, 160, 116, 0.7);
+    color: rgba(248, 160, 116, 1);
     width: 40%;
     position: relative;
     font-size: 35px;
 }
 
 .changerMailConf {
-    color: rgba(248, 160, 116, 0.7);
+    color: rgba(248, 160, 116, 1);
     width: 40%;
     position: relative;
     font-size: 24px;
@@ -203,22 +218,6 @@ input[type=button] {
     justify-content: space-around;
 }
 
-.AfficherLaListeDAmis {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-}
-
-.AfficherLaListeDAmis h2 {
-    margin: 0;
-}
-
-.ouiNonAmis {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
 input[type="radio"] {
     display: none;
 }
@@ -236,7 +235,7 @@ input[type=radio] + label:before {
     height: 24px;
 }
 
-input[type=radio]:checked + label:before {
+input[type="radio"]:checked + label:before {
     background: black;
     box-shadow: inset 0px 0px 0px 2px #fff;
 }
@@ -257,3 +256,10 @@ a {
     top: 110px;
     box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, .2);
 }
+[type="image"] {
+    width: 10vw;
+    
+}
+
+
+
