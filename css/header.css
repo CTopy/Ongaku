@@ -50,7 +50,7 @@ nav {
 }
 
 header .menuDeroulant {
-    padding: 3px;
+    padding: 15px;
     list-style-type: none;
     text-align: center;
     transform: translateY(-1000px);
@@ -62,7 +62,7 @@ header .menuDeroulant {
 .apparaitre {
     background-color: #DCDDDE;
     opacity: 1 !important;
-    transform: translateY(20px) !important;
+    transform: translateY(70px) !important;
     transition-property: transform, opacity, background-color;
     transition-duration: 0.2s;
 }
@@ -70,8 +70,12 @@ header .menuDeroulant {
 .menuDeroulant li {
     background-color: darkgrey;
     border-radius: 7px;
-    margin-top:1px;
-    margin-bottom: 1px;
+    margin-top:2px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    padding-left:20px;
+    padding-right:20px;
+    
     
 }
 
