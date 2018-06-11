@@ -1,9 +1,49 @@
-body, main, h1, html {
+body, main, h1, html, form, input {
     margin : 0;
     padding : 0;
 }
 
 [type="image"] {
-    height : 400px;
-    width : 580px;
+    height : 25vw;
+    width : auto;
+    max-height : 200px;
+}
+
+h1 {
+    font-size: 40pt !important;
+}
+
+:checked+label {
+    transition-property: border-bottom, font-weight;
+    transition-duration: 0.5s;
+    font-weight : bolder;
+    border-bottom : 2px solid black;
+} 
+
+form {
+    display : flex;
+    width : 98vw;
+    height : 100vh;
+    flex-direction:column;
+    justify-content: space-around;
+}
+
+form div {
+    display : flex;
+    width : 98vw;
+    justify-content: space-around;
+}
+
+fieldset {
+    width : 50vw
+}
+
+div:last-child fieldset:last-child {
+    display : flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+[type="radio"], [type="checkbox"] {
+    display : none;
 }
