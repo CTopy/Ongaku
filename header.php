@@ -2,7 +2,9 @@
 
 session_start();
 
-if (isset($_SESSION['idJoueur'])){
+$_SESSION['idJoueur']="";
+
+if (!empty($_SESSION['idJoueur'])){
 
 ?>
 
@@ -30,10 +32,10 @@ if (isset($_SESSION['idJoueur'])){
         </div>
         </div>
 
-        <h1 id="h11"><a href="accueil.html" >ONGAKU</a></h1>
+        <h1><a href="accueil.html" >ONGAKU</a></h1>
 
         <div>
-            <a href="chat.html"> <img src="medias/images/logoChat.png" alt="Icône du chat" /></a>
+           <!-- <a href="chat.html"> <img src="medias/images/logoChat.png" alt="Icône du chat" /></a> -->
 
             <a href="profil.html"> <img class="iconeMembre" src="medias/images/logoFeminin.png" alt="Icône du profil" /></a>
         </div>
@@ -69,7 +71,7 @@ if (isset($_SESSION['idJoueur'])){
         </div>
                 </div>
             
-                  <h1 id="h12"><a href="accueil.html" >ONGAKU</a></h1>
+                  <h1><a href="accueil.html" >ONGAKU</a></h1>
 
             
             <div>
