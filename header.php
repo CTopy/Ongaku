@@ -6,11 +6,12 @@ if (isset($_SESSION['idJoueur'])){
 
 ?>
 
- <header class="header1">
-
+  <header>
         
-            <img id="iconeMenu" src="medias/images/deroulant.png" alt="Menu déroulant" />
-        <nav>
+        <div>
+        
+        <img id="iconeMenu" src="medias/images/deroulant.png" alt="Menu déroulant" />
+        <nav> 
             <ul class="menuDeroulant" >
                 <li><a href="">Se deconnecter</a></li>
 
@@ -19,8 +20,17 @@ if (isset($_SESSION['idJoueur'])){
                 <li><a href="choix.html">Jouer en solo</a></li>
             </ul>
         </nav>
+        
+        <div class="reseaux">
+            
+            <a href="https://twitter.com/Ongaku76824917"> <img class="twitter" src="medias/images/twitter.png" alt="twitter" /></a>
+            
+            <a href="https://www.facebook.com/OngakuMMi/?modal=admin_todo_tour"> <img class="facebook" src="medias/images/facebook.png" alt="facebook" /></a>
+            
+        </div>
+        </div>
 
-        <h1><a href="accueil.html" >ONGAKU</a></h1>
+        <h1 id="h11"><a href="accueil.html" >ONGAKU</a></h1>
 
         <div>
             <a href="chat.html"> <img src="medias/images/logoChat.png" alt="Icône du chat" /></a>
@@ -36,7 +46,9 @@ if (isset($_SESSION['idJoueur'])){
 } else {
 ?>
 
-<header class="header1">
+<header>
+            
+            <div>
             
                <img id="iconeMenu" src="medias/images/deroulant.png" alt="Menu déroulant"/>
                 <nav>
@@ -48,8 +60,16 @@ if (isset($_SESSION['idJoueur'])){
                             <li><a href="choix.html">Jouer en solo</a></li>
                         </ul>
               </nav>
+            <div class="reseaux">
             
-                  <h1><a href="accueil.html" >ONGAKU</a></h1>
+            <a href="https://twitter.com/Ongaku76824917"> <img class="twitter" src="medias/images/twitter.png" alt="twitter" /></a>
+            
+            <a href="https://www.facebook.com/OngakuMMi/?modal=admin_todo_tour"> <img class="facebook" src="medias/images/facebook.png" alt="facebook" /></a>
+            
+        </div>
+                </div>
+            
+                  <h1 id="h12"><a href="accueil.html" >ONGAKU</a></h1>
 
             
             <div>

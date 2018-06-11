@@ -16,7 +16,7 @@ function cliquer(evt){
     
     if(image.getAttribute("src") == "medias/images/deroulant.png"){
         image.src = "medias/images/croixMenuDeroulant.png";
-        image.style.height="30px";
+        
         
     }else{
          image.src = "medias/images/deroulant.png";
