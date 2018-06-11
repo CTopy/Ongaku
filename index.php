@@ -20,12 +20,12 @@
     
 
     <main>
-       <div id="play">
+       <a href="jeu.php"><div id="play">
            
             <img class= "jouer" src="./medias/images/jouerAccueil.png" alt="jouer"/>
-            <img class="disque" src="./medias/images/disqueNoirAccueil.png" alt="disque Noir"/>
+           <img class="disque" src="./medias/images/disqueNoirAccueil.png" alt="disque Noir"/>
 
-       </div>
+           </div></a>
     </main>
 
 
