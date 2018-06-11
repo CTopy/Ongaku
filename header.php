@@ -2,7 +2,7 @@
 
 session_start();
 
-$_SESSION['idJoueur']="";
+
 
 if (!empty($_SESSION['idJoueur'])){
 
@@ -15,11 +15,11 @@ if (!empty($_SESSION['idJoueur'])){
         <img id="iconeMenu" src="medias/images/deroulant.png" alt="Menu déroulant" />
         <nav> 
             <ul class="menuDeroulant" >
-                <li><a href="">Se deconnecter</a></li>
+                <li><a href="seConnecter.php">Se deconnecter</a></li>
 
-                <li><a href="accueil.html">Accueil</a></li>
+                <li><a href="index.php">Accueil</a></li>
 
-                <li><a href="choix.html">Jouer en solo</a></li>
+                <li><a href="jeu.php">Jouer en solo</a></li>
             </ul>
         </nav>
         
@@ -55,11 +55,11 @@ if (!empty($_SESSION['idJoueur'])){
                <img id="iconeMenu" src="medias/images/deroulant.png" alt="Menu déroulant"/>
                 <nav>
                         <ul class="menuDeroulant">
-                            <li><a href="creerCompte.html">creer un compte</a></li>
+                            <li><a href="creerUnCompte.php">creer un compte</a></li>
                             
-                            <li><a href="accueil.html">Accueil</a></li>
+                            <li><a href="index.php">Accueil</a></li>
                             
-                            <li><a href="choix.html">Jouer en solo</a></li>
+                            <li><a href="jeu.php">Jouer en solo</a></li>
                         </ul>
               </nav>
             <div class="reseaux">
