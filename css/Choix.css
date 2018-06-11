@@ -1,34 +1,9 @@
-body{
-    background-image: url(../medias/images/background/backgroundChoix.jpeg);
-}
-fieldset {
-    display : flex;
-    flex-direction : column;
+body, main, h1, html {
+    margin : 0;
+    padding : 0;
 }
 
-[type="radio"] {
-    display : none;
+[type="image"] {
+    height : 400px;
+    width : 580px;
 }
-
-form {
-    display : grid;
-    
-}
-
-#jeu, #genre {
-    grid-row : 1;
-}
-
-#langue, [type="image"] {
-    grid-row : 2;
-}
-
-}
-#jeu {
-    width: 60vw;
-}
-#genre {
-    
-    width: 60vw ;
-}
-
