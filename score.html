@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 
 <head>
     <meta charset="utf-8">
@@ -7,7 +7,8 @@
     <title>Page de resultat</title>
     <meta name="description" content="Affichage des scores après la fin de la partie">
     <link rel="stylesheet" href="./css/styleScore.css">
-
+    <link rel="stylesheet" href="./css/styleGeneral.css">
+          
 </head>
 
 <body>
@@ -23,12 +24,12 @@
     <main>
 
         <h1>Score</h1>
-
+        
         
 
+
         <section class="ombreBarre">
-            
-            <h6 style="display: none">Score Joueur</h6>
+
 
             <div class="numero1">
 
@@ -40,7 +41,7 @@
 
 
 
-                <div class="barreResultat blue"></div>
+                <div id="barreResultat"></div>
                 
                 <p class="scoreJoueur">XXX</p>
                 
@@ -53,9 +54,9 @@
 
         <div class="revancheRejouerQuitter">
 
-            <a href="score.html">revanche</a>
-            <a href="score.html">rejouer</a>
-            <a href="score.html">quitter</a>
+            <button type="button" id="revanche">revanche</button>
+            <button type="button" id="rejouer">rejouer</button>
+            <button type="button" id="quitter">Quitter</button>
 
         </div>
 
@@ -65,6 +66,8 @@
     <footer>
     </footer>
 
-
+<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="js/barreScore.js"></script>
 
 </body>
+</html>

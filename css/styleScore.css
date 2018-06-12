@@ -5,11 +5,14 @@
 
 body {
 
-    background: url(../medias/images/background/backgroundAccueil.png);
+    background: url(../medias/images/backgroundResultat.jpg) no-repeat center fixed;;
+    background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-color: #DCDDDE
+    background-color: #DCDDDE;
+    min-height: 100vh;
+    margin:0;
+    padding: 0;
+    display : flex;
 }
 
 main {
@@ -33,9 +36,14 @@ h1 {
 
 h1::before {
     content: "";
-    background: url(../medias/images/Elements/FlecheVerte.png);
+    background: url(../medias/images/FlecheVerte.png);
     background-repeat: no-repeat;
     background-size: contain;
+    position : relative;
+    left : calc(30% - 60px);
+    width: 50px;
+    height: 50px;
+    
 
     display: block;
     position: absolute;
@@ -62,7 +70,7 @@ h1::before {
     margin: auto;
 }
 
-.barreResultat {
+#barreResultat {
     margin: auto;
     width: 50vw;
     height: 24px;
@@ -72,16 +80,7 @@ h1::before {
 
 }
 
-.barreResultat::before {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 40vw;
-    height: 24px;
-    background: #80DDB3;
-    border-radius: 6px;
 
-}
 
 .scoreJoueur {
     font-size: 40px;
