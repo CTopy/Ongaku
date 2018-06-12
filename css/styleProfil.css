@@ -13,6 +13,11 @@ html {
     background-size: cover
 }
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
 main {
     width: 100vw;
     min-width: 640px;
@@ -21,14 +26,13 @@ main {
     margin: 0;
     padding: 0;
     font-family: New Athletic M54;
-    
 }
 
 h1 {
     font-size: 100px;
     position: relative;
     padding-left: 130px;
-    margin-top: 200px;
+    margin-top: 100px;
 }
 
 h1::before {
@@ -42,6 +46,11 @@ h1::before {
     width: 100%;
     left: -5%;
     top: -21%;
+}
+
+.profilPseudo {
+    padding-left: 10vw;
+    padding-right: 10vw;
 }
 
 .profilPseudo h1 {
@@ -58,7 +67,9 @@ h1::before {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    height: 50vh;
+    height: 40vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
 }
 
 .casesARemplir div:nth-child(-n + 4) label {
@@ -70,6 +81,7 @@ h1::before {
     position: absolute;
     top: -30px;
 }
+
 .caseARemplir div:nth-child(n + 2) label {
     position: absolute;
     top: -30px;
@@ -84,11 +96,12 @@ input[type="text"] {
     background: #EBEBEB;
     width: 80%;
     justify-content: center;
-    height: 60px;
+    height: 20%;
     padding: 0px 0px 0px 10px;
     margin: 0;
 }
-[type="email"]{
+
+[type="email"] {
     font-size: 40px;
     font-family: Im Wunderland Bold;
     border: solid white 3px;
@@ -97,10 +110,11 @@ input[type="text"] {
     background: #EBEBEB;
     width: 80%;
     justify-content: center;
-    height: 60px;
+    height: 20%;
     padding: 0px 0px 0px 10px;
     margin: 0;
 }
+
 [type="password"] {
     font-size: 40px;
     font-family: Im Wunderland Bold;
@@ -110,45 +124,45 @@ input[type="text"] {
     background: #EBEBEB;
     width: 80%;
     justify-content: center;
-    height: 60px;
+    height: 20%;
     padding: 0px 0px 0px 10px;
     margin: 0;
 }
-
 
 input[type="file"] {
     font-size: 40px;
     font-family: New Athletic M54;
-    color: #7FDDB3;
     border: solid white 3px;
     box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, .2);
     border-radius: 20px;
-    background: white;
+    background: #EBEBEB;
     width: 80%;
     justify-content: center;
-    height: 66px;
+    height: 40%;
     padding: 0px 0px 0px 10px;
     margin: 0;
     cursor: pointer;
 }
-
-
 
 .changerPseudo {
     color: rgba(103, 103, 103, 0.7);
     font-size: 24px;
     width: 40%;
     position: relative;
-    font-size: 35px;
+    font-size: 2.4vw;
 }
 
-
 .mettrePhoto {
-    color:rgba(103, 103, 103, 0.7) ;
+    color: rgba(103, 103, 103, 0.7);
     width: 40%;
     justify-content: space-around;
     position: relative;
-    font-size: 35px;
+    font-size: 2vw;
+}
+.mettrePhoto input{
+    font-size: 80%;
+    padding: auto;
+    color: #EBEBEB;
 }
 
 .mettrePhoto img {
@@ -157,19 +171,18 @@ input[type="file"] {
     right: -30px;
 }
 
-
 .changerMail {
     color: rgba(248, 160, 116, 1);
     width: 40%;
     position: relative;
-    font-size: 35px;
+    font-size: 2.4vw;
 }
 
 .changerMailConf {
     color: rgba(248, 160, 116, 1);
     width: 40%;
     position: relative;
-    font-size: 24px;
+    font-size: 1.5vw;
     display: flex;
 }
 
@@ -177,14 +190,14 @@ input[type="file"] {
     color: rgba(103, 103, 103, 0.7);
     width: 40%;
     position: relative;
-    font-size: 35px;
+    font-size: 2.4vw;
 }
 
 .changerMotDePasseConf {
     color: rgba(103, 103, 103, 0.7);
     width: 40%;
     position: relative;
-    font-size: 24px;
+    font-size: 1.5vw;
     display: flex;
     flex-direction: column;
 }
@@ -256,10 +269,27 @@ a {
     top: 110px;
     box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, .2);
 }
-[type="image"] {
+
+[type="image"]{
     width: 10vw;
-    
+    margin-right: 11vw;
 }
 
+[type="image"]:hover {
+    animation: grossir 0.40s linear infinite;
+    animation-play-state: running;
+}
 
-
+@keyframes grossir {
+    0% {
+        transform-origin: center;
+    }
+    50% {
+        transform: scale(1.04);
+        transform-origin: center;
+    }
+    100% {
+        transform: scale(1);
+        transform-origin: center;
+    }
+}
