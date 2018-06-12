@@ -1,6 +1,6 @@
 /*************************commun aux 2 headers******************************/
 
-header, nav{
+header, nav {
     margin: 0;
     padding: 0;
    
@@ -44,6 +44,7 @@ nav {
     left : 20px;
     bottom:-65px;
     /*bottom : calc(-70px - 20px);*/
+	z-index : 10;
 }
 
 header .menuDeroulant {
@@ -124,6 +125,6 @@ header h1 a {
     padding-right: 110px;
 }
 
-#reseaux{
+.reseaux{
     z-index : 1000000;
 }
