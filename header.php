@@ -32,7 +32,7 @@ if (!empty($_SESSION['idJoueur'])){
         </div>
         </div>
 
-        <h1><a href="accueil.html" >ONGAKU</a></h1>
+        <h1><a href="index.php" >ONGAKU</a></h1>
 
         <div>
            <!-- <a href="chat.html"> <img src="medias/images/logoChat.png" alt="Icône du chat" /></a> -->
@@ -55,7 +55,7 @@ if (!empty($_SESSION['idJoueur'])){
                <img id="iconeMenu" src="medias/images/deroulant.png" alt="Menu déroulant"/>
                 <nav>
                         <ul class="menuDeroulant">
-                            <li><a href="creerUnCompte.php">creer un compte</a></li>
+                            <li><a href="CreerUnCompte.php">creer un compte</a></li>
                             
                             <li><a href="index.php">Accueil</a></li>
                             
@@ -71,11 +71,11 @@ if (!empty($_SESSION['idJoueur'])){
         </div>
                 </div>
             
-                  <h1><a href="accueil.html" >ONGAKU</a></h1>
+                  <h1><a href="index.php" >ONGAKU</a></h1>
 
             
             <div>
-                <a href="profil.html" > <img class="iconeMembre" src="medias/images/logoInvite.png" alt ="Icône du profil"/></a>
+                <a href="seConnecter.php" > <img class="iconeMembre" src="medias/images/logoInvite.png" alt ="Icône du profil"/></a>
             </div>
     
         </header>
