@@ -9,14 +9,14 @@ function initialiser(evt){
     
     
 function cliquer(evt){
-    document.querySelector(".menuDeroulant").classList.toggle("apparaitre") ;
+    document.querySelector("nav").classList.toggle("apparaitre") ;
     
     var image = document.getElementById("iconeMenu");
-    console.log(image.getAttribute("src"));
+//    console.log(image.getAttribute("src"));
     
     if(image.getAttribute("src") == "medias/images/deroulant.png"){
         image.src = "medias/images/croixMenuDeroulant.png";
-        image.style.height="30px";
+        
         
     }else{
          image.src = "medias/images/deroulant.png";

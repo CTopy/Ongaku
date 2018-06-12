@@ -1,14 +1,11 @@
 /*************************commun aux 2 headers******************************/
 
-h1, header, nav, body, html {
+header, nav{
     margin: 0;
     padding: 0;
    
 }
 
-body {
- background-color: black;
-}
 
 
 header>img {
@@ -22,6 +19,10 @@ header .iconeMembre {
 
 header div a:first-child img {
     width: 50px;
+}
+
+.facebook{
+    width: 49.5px;
 }
 
 header h1 {
@@ -46,7 +47,7 @@ nav {
 }
 
 header .menuDeroulant {
-    padding: 3px;
+    padding: 15px;
     list-style-type: none;
     text-align: center;
     transform: translateY(-1000px);
@@ -56,9 +57,9 @@ header .menuDeroulant {
 }
 
 .apparaitre {
-    background-color: #DCDDDE;
+    background-color: white /*#DCDDDE*/;
     opacity: 1 !important;
-    transform: translateY(20px) !important;
+    transform: translateY(70px) !important;
     transition-property: transform, opacity, background-color;
     transition-duration: 0.2s;
 }
@@ -66,8 +67,12 @@ header .menuDeroulant {
 .menuDeroulant li {
     background-color: darkgrey;
     border-radius: 7px;
-    margin-top:1px;
-    margin-bottom: 1px;
+    margin-top:2px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    padding-left:20px;
+    padding-right:20px;
+    
     
 }
 
@@ -83,7 +88,7 @@ header {
     margin: 0;
     height: 70px;
     padding : 0 30px 0 30px;
-    box-sizing: border-box;
+    box-sizing:border-box;
     position : relative;
 }
 
@@ -99,4 +104,26 @@ header div {
 
 header>img {
     width : 50px;
+}
+
+#iconeMenu{
+   z-index: 100;
+    width:60px;
+}
+
+
+.reseaux a+a{
+    margin-left : 0px;
+}
+
+.twitter{
+    padding-left: 10px;
+}
+
+header h1 a {
+    padding-right: 110px;
+}
+
+#reseaux{
+    z-index : 1000000;
 }

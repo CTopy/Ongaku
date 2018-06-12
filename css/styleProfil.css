@@ -6,7 +6,7 @@
 }
 
 html {
-    background: url("../medias/images/background/backgroundProfil.jpeg");
+    background: url("../medias/images/backgroundProfil.jpeg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
@@ -16,28 +16,29 @@ html {
 body {
     margin: 0;
     padding: 0;
+   
 }
 
 main {
     width: 100vw;
     min-width: 640px;
-    height: 100vh;
+    max-height: 100%;
     min-height: 360px;
     margin: 0;
     padding: 0;
     font-family: New Athletic M54;
 }
 
-h1 {
+main h1 {
     font-size: 100px;
     position: relative;
     padding-left: 130px;
     margin-top: 100px;
 }
 
-h1::before {
+main h1::before {
     content: "";
-    background: url(../medias/images/Elements/FlecheVerte.png);
+    background: url(../medias/images/FlecheVerte.png);
     background-repeat: no-repeat;
     background-size: contain;
     display: block;
@@ -257,7 +258,7 @@ label {
     cursor: pointer;
 }
 
-a {
+main a {
     text-decoration: none;
     color: black;
     background: white;
