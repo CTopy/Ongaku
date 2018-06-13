@@ -6,8 +6,6 @@ header, nav {
    
 }
 
-
-
 header>img {
     height: 50px;
     object-fit: contain;
@@ -15,6 +13,7 @@ header>img {
 
 header .iconeMembre {
     width: 60px;
+    
 }
 
 header div a:first-child img {
@@ -27,7 +26,7 @@ header div a:first-child img {
 
 header h1 {
     margin: 0;
-    padding: 0;
+    padding:0;
     font-family: 'New Athletic M54';
     transform: scaleY(0.5);
 }
@@ -37,14 +36,15 @@ header a {
     text-align: center;
     padding-left: 0;
     text-decoration: none;
+    z-index:100;
 }
 
-nav {
+nav{
     position: absolute;
     left : 20px;
-    bottom:-65px;
+    bottom:-72px;
     /*bottom : calc(-70px - 20px);*/
-	z-index : 10;
+	z-index : 1;
 }
 
 header .menuDeroulant {
@@ -65,7 +65,7 @@ header .menuDeroulant {
     transition-duration: 0.2s;
 }
 
-.menuDeroulant li {
+.menuDeroulant li{
     background-color: darkgrey;
     border-radius: 7px;
     margin-top:2px;
@@ -73,8 +73,7 @@ header .menuDeroulant {
     font-size: 20px;
     padding-left:20px;
     padding-right:20px;
-    
-    
+    z-index: 5;
 }
 
 header {
@@ -107,8 +106,8 @@ header>img {
     width : 50px;
 }
 
-#iconeMenu{
-   z-index: 100;
+#iconeRegle, #iconeMenu{
+   z-index: 10;
     width:60px;
 }
 
@@ -122,9 +121,29 @@ header>img {
 }
 
 header h1 a {
-    padding-right: 110px;
+    padding-right: 60px;
 }
 
 .reseaux{
-    z-index : 1000000;
+    z-index : 100;
 }
+
+#nav2 {
+    position: absolute;
+    right : 20px;
+    bottom:-300px;
+    /*bottom : calc(-70px - 20px);*/
+    width: 500px;
+	z-index : 1;
+}
+
+#nav2 li {
+    font-family : 'Courier New';
+    background-color : transparent;
+}
+
+#iconeRegle{
+    width : 42px;
+    margin-right: 10px;
+}
+

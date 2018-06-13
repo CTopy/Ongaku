@@ -36,8 +36,17 @@ if (!empty($_SESSION['idJoueur'])){
 
         <div>
            <!-- <a href="chat.html"> <img src="medias/images/logoChat.png" alt="Icône du chat" /></a> -->
+             <img id="iconeRegle" src="medias/images/boutonLivreFerme.png" alt="Règles">
+                <section id="nav2">
+                    <ul class="menuDeroulant">
+                        <li>Vous pouvez remplir les mots de la musique pendant 45 secondes (30 secondes de musique et 15 secondes supplémentaires pour écrire)
+                        <li>Le seul moyen pour compléter les mots manquant c'est de les écrire dans la barre de réponse</li>
+                        <li>Vous pouvez mettre tous les mots en même temps dans la barre de réponse même s'ils ne se suivent pas dans les paroles</li>
+                        <li>Une partie est composée de 10 chansons différentes</li>
+                    </ul>
+                </section>
 
-            <a href="profil.html"> <img class="iconeMembre" src="medias/images/logoFeminin.png" alt="Icône du profil" /></a>
+            <a href="profil.php"> <img class="iconeMembre" src="medias/images/logoFeminin.png" alt="Icône du profil" /></a>
         </div>
 
     </header>
@@ -73,8 +82,16 @@ if (!empty($_SESSION['idJoueur'])){
             
                   <h1><a href="index.php" >ONGAKU</a></h1>
 
-            
             <div>
+                <img id="iconeRegle" src="medias/images/boutonLivreFerme.png" alt="Règles">
+                <section id="nav2">
+                    <ul class="menuDeroulant">
+                        <li>Vous pouvez remplir les mots de la musique pendant 45 secondes (30 secondes de musique et 15 secondes supplémentaires pour écrire)
+                        <li>Le seul moyen pour compléter les mots manquant c'est de les écrire dans la barre de réponse</li>
+                        <li>Vous pouvez mettre tous les mots en même temps dans la barre de réponse même s'ils ne se suivent pas dans les paroles</li>
+                        <li>Une partie est composée de 10 chansons différentes</li>
+                    </ul>
+                </section>
                 <a href="seConnecter.php" > <img class="iconeMembre" src="medias/images/logoInvite.png" alt ="Icône du profil"/></a>
             </div>
     
