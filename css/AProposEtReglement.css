@@ -1,1 +1,19 @@
-Rajdhani Bold
+/*Rajdhani Bold*/
+
+body{
+    background-image: url(../medias/images/background/backgroundChoix.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #DCDDDE;
+    max-height: 100vh;
+    margin:0;
+    padding: 0;
+}
+main {
+    height: 100%;
+    width: 100%;
+    
+}
+p{
+    font-family: Rajdhani-Bold;
+}
