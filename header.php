@@ -20,6 +20,8 @@ if (!empty($_SESSION['idJoueur'])){
                 <li><a href="index.php">Accueil</a></li>
 
                 <li><a href="jeu.php">Jouer en solo</a></li>
+                
+                <li><a href="aPropos.html">A propos</a></li>
             </ul>
         </nav>
         
@@ -69,6 +71,8 @@ if (!empty($_SESSION['idJoueur'])){
                             <li><a href="index.php">Accueil</a></li>
                             
                             <li><a href="jeu.php">Jouer en solo</a></li>
+                            
+                             <li><a href="aPropos.html">A propos</a></li>
                         </ul>
               </nav>
             <div class="reseaux">

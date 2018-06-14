@@ -42,7 +42,7 @@ header a {
 nav{
     position: absolute;
     left : 20px;
-    bottom:-72px;
+    bottom:-105px;
     /*bottom : calc(-70px - 20px);*/
 	z-index : 1;
 }
