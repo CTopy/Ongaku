@@ -4,7 +4,7 @@ src: url('../medias/fonts/New Athletic M54.ttf');
 }
 
 html {
-    background-image: url(../images/backgroundAccueil.png);
+    background-image: url(../medias/images/backgroundAccueil.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
 }

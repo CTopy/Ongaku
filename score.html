@@ -8,7 +8,8 @@
     <meta name="description" content="Affichage des scores après la fin de la partie">
     <link rel="stylesheet" href="./css/styleScore.css">
     <link rel="stylesheet" href="./css/styleGeneral.css">
-          
+    <link rel="stylesheet" href="./css/jquery-ui.css">
+
 </head>
 
 <body>
@@ -24,8 +25,8 @@
     <main>
 
         <h1>Score</h1>
-        
-        
+
+
 
 
         <section class="ombreBarre">
@@ -33,30 +34,27 @@
 
             <div class="numero1">
 
-                <p class="classementJoueur">1</p>
-
                 <div>
                     <img class="logoJoueur" src="./medias/images/logoFeminin.png" alt="Logo joueur basique">
                 </div>
 
 
 
-                <div id="barreResultat"></div>
-                
-                <p class="scoreJoueur">XXX</p>
-                
-                
+                <div id="barre"></div>
+
+                <p class="scoreJoueur" data-score="8">XXX</p>
+
+
             </div>
-            
-            
+
+
 
         </section>
 
-        <div class="revancheRejouerQuitter">
+        <div class="rejouerQuitter">
 
-            <button type="button" id="revanche">revanche</button>
-            <button type="button" id="rejouer">rejouer</button>
-            <button type="button" id="quitter">Quitter</button>
+            <button id="rejouer">Rejouer</button>
+            <button id="quitter">Quitter</button>
 
         </div>
 
@@ -66,8 +64,10 @@
     <footer>
     </footer>
 
-<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
-<script type="text/javascript" src="js/barreScore.js"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/barreScore.js"></script>
 
 </body>
+
 </html>

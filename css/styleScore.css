@@ -5,8 +5,8 @@
 
 body {
 
-    background: url(../medias/images/backgroundResultat.jpg) no-repeat center fixed;;
-    background-size: contain;
+    background: url(../medias/images/backgroundResultat.png) no-repeat center fixed;;
+    background-size: cover;
     background-repeat: no-repeat;
     background-color: #DCDDDE;
     min-height: 100vh;
@@ -66,10 +66,11 @@ h1::before {
 }
 
 .logoJoueur {
-    height: 100px;
+    height: 60%;
     margin: auto;
+    vertical-align: middle;
 }
-
+/*
 #barreResultat {
     margin: auto;
     width: 50vw;
@@ -79,8 +80,16 @@ h1::before {
     border-radius: 10px;
 
 }
+*/
 
-
+#barre{
+    margin: auto;
+    width: 50vw;
+    height: 24px;
+    background-color: white;
+    border: solid 5px #D5D6D7;
+    border-radius: 10px;
+}
 
 .scoreJoueur {
     font-size: 40px;
@@ -95,21 +104,28 @@ h1::before {
     rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 50%);
 }
 
-.revancheRejouerQuitter {
+.rejouerQuitter {
     display: flex;
     justify-content: space-around;
 
 }
 
-.revancheRejouerQuitter a {
+.rejouerQuitter button {
     background-color: white;
 
-    border-radius: 5px;
-    padding: 4px;
-    padding-left: 20px;
-    padding-right: 20px;
+    border: solid 5px #D5D6D7;
+    padding: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
     font-size: 24px;
+    font-family: New Athletic M54;
 
     text-decoration: none;
     color: black;
 }
+
+.rejouerQuitter:first-child{
+    
+}
+
+.rejouerQuitter:
