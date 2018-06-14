@@ -21,7 +21,7 @@ if (!empty($_SESSION['idJoueur'])){
 
                 <li><a href="jeu.php">Jouer en solo</a></li>
                 
-                <li><a href="aPropos.html">A propos</a></li>
+                <li><a href="aPropos.php">A propos</a></li>
             </ul>
         </nav>
         
@@ -34,7 +34,7 @@ if (!empty($_SESSION['idJoueur'])){
         </div>
         </div>
 
-        <h1><a href="index.php" >ONGAKU</a></h1>
+        <p><a href="index.php" >ONGAKU</a></p>
 
         <div>
            <!-- <a href="chat.html"> <img src="medias/images/logoChat.png" alt="Icône du chat" /></a> -->
@@ -72,7 +72,7 @@ if (!empty($_SESSION['idJoueur'])){
                             
                             <li><a href="jeu.php">Jouer en solo</a></li>
                             
-                             <li><a href="aPropos.html">A propos</a></li>
+                             <li><a href="aPropos.php">A propos</a></li>
                         </ul>
               </nav>
             <div class="reseaux">
@@ -84,7 +84,7 @@ if (!empty($_SESSION['idJoueur'])){
         </div>
                 </div>
             
-                  <h1><a href="index.php" >ONGAKU</a></h1>
+                  <p><a href="index.php" >ONGAKU</a></p>
 
             <div>
                 <img id="iconeRegle" src="medias/images/boutonLivreFerme.png" alt="Règles">
