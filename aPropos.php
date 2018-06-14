@@ -12,9 +12,7 @@
 </head>
 
 <body>
-    <header>
-    
-    </header>
+    <?php include("header.php"); ?>
         <main>
                 <div class="titre">
                     <h1>A Propos</h1>
