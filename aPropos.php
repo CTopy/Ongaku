@@ -8,7 +8,7 @@
     <meta type="description" content="Nous vous donnons des détails sur nous et sur la conception du jeu Ongaku" />
     <link rel="stylesheet" href="css/aPropos.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="css/header.css" />
-    
+    <script type="text/javascript" src="js/header.js"></script>
     
 </head>
 
@@ -21,7 +21,7 @@
             <div class="contenu">
                 <div class="pre0">
                 <p>
-                    Bonjour à vous et bienvenue sur Ongaku ! 
+                    Bonjour à vous et bienvenue sur <span id="ongaku">Ongaku</span> ! 
                 </p>
                 </div>
                 <div class="pre1">
