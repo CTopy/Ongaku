@@ -7,6 +7,7 @@
     <meta charset="utf-8">
     <meta type="description" content="Nous vous donnons des détails sur nous et sur la conception du jeu Ongaku" />
     <link rel="stylesheet" href="css/aPropos.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/header.css" />
     
     
 </head>
