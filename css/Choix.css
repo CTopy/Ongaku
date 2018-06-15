@@ -1,24 +1,25 @@
+/************************************** GENERAL *********************/
 body, main, h1, html, form, input {
     margin : 0;
     padding : 0;
 }
 
 [type="image"] {
-    height : 25vw;
+    height : 40vw;
     width : auto;
     max-height : 200px;
+    
+    -webkit-filter: drop-shadow(12px 12px 25px rgba(0,0,0,0.5));
+    filter: url(#drop-shadow);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
 }
 
 h1 {
     font-size: 40pt !important;
 }
 
-:checked+label {
-    transition-property: border-bottom, font-weight;
-    transition-duration: 0.5s;
-    font-weight : bolder;
-    border-bottom : 2px solid black;
-} 
+/**************** POSITIONNEMENT ************************/
 
 form {
     display : flex;
@@ -28,22 +29,112 @@ form {
     justify-content: space-around;
 }
 
-form div {
+form>div {
     display : flex;
     width : 98vw;
     justify-content: space-around;
 }
 
-fieldset {
-    width : 50vw
+.fieldset {
+    width : 50vw;
+    margin : 0 2vw 0 2vw;
+    height : 30vh;
+    
+    background-color : lightgrey;
+    border : none;
+    border-radius : 30px;
+    box-shadow: 0 0 15px black;
+    
+    display : flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items : center;
+    overflow : hidden;
+    position : relative;
 }
 
-div:last-child fieldset:last-child {
+div:last-child .fieldset:last-child {
     display : flex;
     justify-content: space-around;
     align-items: center;
+    
+    background-color : transparent;
+    border : none;
+    border-radius : 0;
+    box-shadow: 0 0 0 transparent;
 }
 
-[type="radio"], [type="checkbox"] {
+h1 {
+    margin : 0 auto;
+    font-size : 
+        4.5vw !important;
+}
+
+/************************ MISE EN FORME **********************/
+
+main {
+    background-image: url(../medias/images/background/backgroundChoix.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+[type="checkbox"], [type="radio"] {
     display : none;
+}
+
+:checked+label {
+    transition-property: border-bottom, font-weight;
+    transition-duration: 0.5s;
+    font-weight : bolder;
+    border-bottom : 2px solid black;
+} 
+
+label, h2 {
+    font-family : 'New Athletic M54'
+}
+
+label {
+    font-size : 2vw;
+}
+
+.checkbox {
+    display : none;
+}
+
+h2 {
+    font-size : 3.5vw !important;
+    position : absolute;
+    top : 23vh;
+    left : 0;
+    transform-origin: top left;
+    transform : rotate(-90deg);
+}
+
+.shown {
+    visibility: visible;
+}
+
+/****************** PSEUDO ELEMENTS **********************/
+
+.up {
+    height : 30px;
+    width : 163px;
+    background-image: url(../medias/images/Elements/triangleDefillementVert.png);
+    position : absolute;
+    top : 0;
+    left : calc(50% - 81px);
+}
+.down {
+    height : 30px;
+    width : 163px;
+    background-image: url(../medias/images/Elements/triangleDefillementVert.png);
+    transform : rotate(180deg);
+    position : absolute;
+    bottom : 0;
+    left : calc(50% - 81px);
+}
+
+.up, .down {
+    background-color: lightgrey;
+    border : none;
 }

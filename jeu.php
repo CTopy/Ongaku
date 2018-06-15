@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="css/styleGeneral.css" />
         <link rel="stylesheet" href="css/jeu.css" />
         <script src="js/jeu.js"></script>
-        <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
 
     <body>

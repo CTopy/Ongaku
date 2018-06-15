@@ -12,78 +12,124 @@
 
 <body>
     <main>
-        <h1>Choisissez votre mode de jeu</h1>
-        <form method="post">
+        <form method="post" action="jeu.php">
+            <h1>Choisissez votre mode de jeu</h1>
             <div>
-                <fieldset id="jeu">
-                    <legend>JEU</legend>
-                    <input id="classique" type="radio" name="jeu" value="classique" />
-                    <label for="classique">CLASSIQUE</label>
+                <div class="fieldset" id="jeu">
+                    <button type="button" class="up"></button>
+                    <h2>JEU</h2>
 
-                    <input id="chrono" type="radio" name="jeu" value="classique" />
-                    <label for="chrono">CHRONO</label>
-                </fieldset>
-
-                <fieldset id="style">
-                    <legend>STYLES</legend>
-                    <input id="1" type="checkbox" name="style" value="1" />
-                    <label for="1">
-                        Rock </label>
-
-                    <input id="2" type="checkbox" name="style" value="2" />
-                    <label for="2">
-                        Pop </label>
-
-                    <input id="3" type="checkbox" name="style" value="3" />
-                    <label for="3">
-                        Rap </label>
-
-                    <input id="4" type="checkbox" name="style" value="4" />
-                    <label for="4">
-                        Country </label>
-
-                    <input id="5" type="checkbox" name="style" value="5" />
-                    <label for="5">
-                        Folk </label>
-
-                    <input id="6" type="checkbox" name="style" value="6" />
-                    <label for="6">
-                        Metal </label>
+                    <div class="checkbox">
+                        <input id="classique" type="radio" name="jeu" value="classique" />
+                        <label for="classique">CLASSIQUE
+                            
+                        </label>
+                    </div>
 
 
+                    <div class="checkbox">
+                        <input id="chrono" type="radio" name="jeu" value="classique" />
+                        <label for="chrono">CHRONO</label>
+                    </div>
+                    <button type="button" class="down"></button>
+                </div>
 
-                </fieldset>
+                <div class="fieldset" id="style">
+                    <button type="button" class="up"></button>
+                    <h2>STYLES</h2>
+
+                    <div class="checkbox">
+                        <input id="1" type="checkbox" name="style" value="1" />
+                        <label for="1">
+                            Rock </label>
+                    </div>
+
+                    <div class="checkbox">
+                        <input id="2" type="checkbox" name="style" value="2" />
+                        <label for="2">
+                            Pop </label>
+                    </div>
+
+                    <div class="checkbox">
+                        <input id="3" type="checkbox" name="style" value="3" />
+                        <label for="3">
+                            Rap </label>
+                    </div>
+
+                    <div class="checkbox">
+                        <input id="4" type="checkbox" name="style" value="4" />
+                        <label for="4">
+                            Country </label>
+                    </div>
+
+                    <div class="checkbox">
+                        <input id="5" type="checkbox" name="style" value="5" />
+                        <label for="5">
+                            Folk </label>
+                    </div>
+
+                    <div class="checkbox">
+                        <input id="6" type="checkbox" name="style" value="6" />
+                        <label for="6">
+                            Metal </label>
+                    </div>
+                    <button type="button" class="down"></button>
+                </div>
             </div>
             <div>
 
-                <fieldset id="langue">
-                    <legend>LANGUE</legend>
+                <div class="fieldset" id="langue">
+                    <button type="button" class="up"></button>
+                    <h2>LANGUEs</h2>
 
-                    <input id="ALL" type="checkbox" name="style" value="ALL" />
-                    <label for="ALL">
-                        Allemand </label>
+                    <div class="checkbox">
+                        <input id="ALL" type="checkbox" name="style" value="ALL" />
+                        <label for="ALL">
+                            Allemand </label>
+                    </div>
 
-                    <input id="ANG" type="checkbox" name="style" value="ANG" />
-                    <label for="ANG">
-                        Anglais </label>
+                    <div class="checkbox">
+                        <input id="ANG" type="checkbox" name="style" value="ANG" />
+                        <label for="ANG">
+                            Anglais </label>
+                    </div>
 
-                    <input id="ESP" type="checkbox" name="style" value="ESP" />
-                    <label for="ESP">
-                        Espagnol </label>
+                    <div class="checkbox">
+                        <input id="ESP" type="checkbox" name="style" value="ESP" />
+                        <label for="ESP">
+                            Espagnol </label>
+                    </div>
 
-                    <input id="FRA" type="checkbox" name="style" value="FRA" />
-                    <label for="FRA">
-                        Francais </label>
-
-                </fieldset>
-                <fieldset id="valider">
+                    <div class="checkbox">
+                        <input id="FRA" type="checkbox" name="style" value="FRA" />
+                        <label for="FRA">
+                            Francais </label>
+                    </div>
+                    <button type="button" class="down"></button>
+                </div>
+                <div class="fieldset" id="valider">
                     <input type="image" src="medias/images/Elements/boutonChoix.png" height="300" width="300" alt="Valider" />
-                </fieldset>
+                    <svg height="0" xmlns="http://www.w3.org/2000/svg">
+                        <filter id="drop-shadow">
+                            <feGaussianBlur in="SourceAlpha" stdDeviation="4" />
+                            <feOffset dx="12" dy="12" result="offsetblur" />
+                            <feFlood flood-color="rgba(0,0,0,0.5)" />
+                            <feComposite in2="offsetblur" operator="in" />
+                            <feMerge>
+                                <feMergeNode/>
+                                <feMergeNode in="SourceGraphic" />
+                            </feMerge>
+                        </filter>
+                    </svg>
+                </div>
             </div>
 
         </form>
 
     </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/choix.js"></script>
 </body>
 
 </html>
