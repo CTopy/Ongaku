@@ -15,7 +15,7 @@ if (!empty($_SESSION['idJoueur'])){
         <img id="iconeMenu" src="medias/images/deroulant.png" alt="Menu déroulant" />
         <nav> 
             <ul class="menuDeroulant" >
-                <li><a href="seConnecter.php">Se deconnecter</a></li>
+                <li><a href="deconnexion.php">Se deconnecter</a></li>
 
                 <li><a href="index.php">Accueil</a></li>
 
