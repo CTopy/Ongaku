@@ -24,7 +24,7 @@ header div a:first-child img {
 }
 
 header p {
-    margin-right:45px;
+    margin-right:100px;
     font-size: 10vh;
     padding:0;
     font-family: 'New Athletic M54';
@@ -130,7 +130,7 @@ header h1 a {
 
 #nav2 {
     position: absolute;
-    right : 20px;
+    left : 230px;
     bottom:-300px;
     /*bottom : calc(-70px - 20px);*/
     width: 500px;
@@ -143,7 +143,17 @@ header h1 a {
 }
 
 #iconeRegle{
-    width : 42px;
-    margin-right: 10px;
+    width : 41px;
+    margin-left: 8px;
+    margin-bottom: 4px;
 }
 
+#pseudo{
+    margin-right: 5px;
+    margin-top: 40px;
+    font-size: 2vh;
+    padding:0;
+    font-family: 'New Athletic M54';
+    transform: none;
+    color :gray;
+}
