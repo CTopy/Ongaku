@@ -7,14 +7,15 @@ session_start();
         $pdo->query("SET NAMES utf8");
         $pdo->query("SET CHARACTER SET 'utf8'");
         $pdo->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+        
+
+
+if (!empty($_SESSION['idJoueur'])){
+    
         $query=$pdo->prepare('SELECT PseudoJoueur FROM JOUEURS WHERE idJoueur=:id');
         $query->bindValue(':id',$_SESSION["idJoueur"],PDO::PARAM_INT);
         $query->execute();
         $data=$query->fetch();
-
-
-
-if (!empty($_SESSION['idJoueur'])){
 
 ?>
 
@@ -69,6 +70,9 @@ if (!empty($_SESSION['idJoueur'])){
 
 <?php
 } else {
+    
+        
+
 ?>
 
 <header>
