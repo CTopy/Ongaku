@@ -1,6 +1,7 @@
 <?php
 
 header("Content-type: text/html; charset=UTF-8");
+session_start();
 
 /*if ($_SESSION['idJoueur'] == false) {
      header("Location: index.php");
@@ -20,7 +21,6 @@ $resultat = $statement->fetch(PDO::FETCH_ASSOC);
 if ($resultat == false) {
     header("Location: index.php");
 }*/
-
 ?>
 
 <!DOCTYPE html>
@@ -173,7 +173,7 @@ if ($resultat == false) {
                     while ($ligne != false) {
             ?>
 
-            <form action="adminmodify.php" method="post">
+            <form id="modifierMusique" action="adminmodify.php" method="post">
                 <fieldset>
                     <p>Titre :
                         <?php echo($ligne['NomMusique']) ?>
@@ -260,10 +260,14 @@ if ($resultat == false) {
                         } // En boucle
                     ?>
 
-                    <input type="hidden" name="action" value="modify" />
-                    <button type="submit">Modifier cette musique</button>
+                    <button name="action" value="modify" type="submit">Modifier cette musique</button>
+                    
                 </fieldset>
             </form>
+            <form action="admin_process.php" method="post" id="supprimerMusique">
+                        <input type="hidden" name="IdMusique" value="<?php echo($ligne['IdDeMusique']) ?>" />
+                        <button id="delete" name="action" value="delete" type="submit">^ Supprimer cette musique ^</button>
+                    </form>
 
             <?php
                         $ligne = $statement->fetch(PDO::FETCH_ASSOC);
@@ -376,11 +380,12 @@ if ($resultat == false) {
                         }
                         ?>
                         <label>Modifier les styles</label>
+                        <p>Attention ! Si vous ne voulez pas modifier les styles, ne touchez à rien, sinon, sélectionner TOUS les styles qui doivent être appliqués sur la musique, même ceux déjà présents. Lorsque vous validerez, les anciens styles seront supprimés, et les nouveaux seront appliqués.</p>
 
                         <?php
                     }
                         ?>
-                        <select id="styles" name="IdStyle">
+                        <select id="styles" class="styles2" name="IdStyle">
                             <option value="false">Ne pas modifier</option>
                             <?php
                     $requete = "SELECT IdStyle, LibelleStyle FROM STYLES";
@@ -402,47 +407,48 @@ if ($resultat == false) {
                         </fieldset>
                     <fieldset>
                         <legend>Modifier les paroles liées à cette musique</legend>
-                        
+
                         <?php
-                        //
-                        // On recherche les paroles liées à cette musique
-                        //
-                        $requete2 = "SELECT Paroles, IdParoles FROM PAROLES WHERE PAROLES.IdMusique = '".addslashes($_POST['IdDeezer'])."'";
-                        $statement2 = $pdo->query($requete2);
-                        $ligne2 = $statement2->fetch(PDO::FETCH_ASSOC);
+                    //
+                    // On recherche les paroles liées à cette musique
+                    //
+                    $requete2 = "SELECT Paroles, IdParoles FROM PAROLES WHERE PAROLES.IdMusique = '".addslashes($_POST['IdDeezer'])."'";
+                    $statement2 = $pdo->query($requete2);
+                    $ligne2 = $statement2->fetch(PDO::FETCH_ASSOC);
 
-                        //Si aucune n'a été trouvée
-                        if ($ligne2 == false) {
-                    ?>
+                    //Si aucune n'a été trouvée
+                    if ($ligne2 == false) {
+                        ?>
 
-                    <p>Aucunes paroles n'ont été trouvées pour cette chanson, cela semble être une anomalie. Ajoutez les paroles de l'extrait Deezer</p>
+                        <p>Aucunes paroles n'ont été trouvées pour cette chanson, cela semble être une anomalie. Ajoutez les paroles de l'extrait Deezer</p>
 
-                    <?php
-                        } ?>
+                        <?php
+                    } ?>
                         <legend style="font-family : 'Courier New';">Modifier les paroles si besoin, sinon, laisser la zone de texte tel quel, ou vide.</legend>
                         <?php
                     $nbParoles = 0;
-                        //Sinon on affiche toutes les paroles
-                        while ($ligne2 != false) {
-                            $nbParoles++;
-                    ?>
-<br />
-                        <textarea cols="50" rows="5" name="Paroles<?php echo($nbParoles); ?>"><?php echo($ligne2['Paroles']); ?></textarea>
-
-                    <?php
-                            $ligne2 = $statement2->fetch(PDO::FETCH_ASSOC);
-                        } // En boucle
-                    if ($nbParoles < 4) {
-                        for ($nbParoles; $nbParoles < 4; $nbParoles++) {
-                            ?>
+                    //Sinon on affiche toutes les paroles
+                    while ($ligne2 != false) {
+                        $nbParoles++;
+                        ?>
                         <br />
-                        <textarea cols="50" rows="5" name="Paroles<?php echo($nbParoles); ?>">
-                        </textarea>
-                        
+                        <textarea cols="50" rows="5" name="Paroles<?php echo($nbParoles); ?>"><?php echo($ligne2['Paroles']); ?></textarea>
+                        <input type="hidden" name="IdParoles<?php echo($nbParoles); ?>" value="<?php echo($ligne2['IdParoles']);?>"/>
+
+                        <?php
+                        $ligne2 = $statement2->fetch(PDO::FETCH_ASSOC);
+                    } // En boucle
+                    if ($nbParoles < 4) {
+                        $nbParoles++;
+                        for ($nbParoles; $nbParoles <= 4; $nbParoles++) {
+                        ?>
+                        <br />
+                        <textarea cols="50" rows="5" name="Paroles<?php echo($nbParoles); ?>"></textarea>
+
                         <?php
                         }
                     }
-                    ?>
+                        ?>
                     </fieldset>
                     <input type="hidden" name="action" value="modify" />
                     <input type="hidden" name="oldid" value="<?php echo($_POST['IdDeezer']) ?>" />
