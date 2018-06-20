@@ -22,6 +22,7 @@
         //
         var oReq = new XMLHttpRequest(); //New request object
         oReq.onload = function () {
+            
             //This is where you handle what to do with the response.
             //The actual data is found on this.responseText
 
@@ -29,7 +30,7 @@
             //0 : IdMusique
             //1 : TitreMusique
             //2 : NomAuteur
-            //Vérification faite sur la page PHP
+            //3 : Requete pour le debug
             //4 : Phrase
             //5 : IdParoles
             donneesPHPloc = this.responseText.split([";"]);

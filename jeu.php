@@ -2,6 +2,8 @@
 header("Content-type: text/html; charset=UTF-8");
 session_start();
 
+unset($_SESSION['musiques']);
+$_SESSION['musiques'] = array();
 
 ?>
 <!DOCTYPE html>
