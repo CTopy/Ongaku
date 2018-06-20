@@ -1,9 +1,5 @@
 <?php
 header("Content-type: text/html; charset=UTF-8");
-session_start();
-
-unset($_SESSION['musiques']);
-$_SESSION['musiques'] = array();
 
 ?>
 <!DOCTYPE html>
@@ -16,10 +12,16 @@ $_SESSION['musiques'] = array();
     <meta type="description" content="" />
 
     <link rel="stylesheet" href="css/styleGeneral.css" />
+    <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/jeu.css" />
 </head>
 
 <body>
+    <?php
+    require("header.php");
+    unset($_SESSION['musiques']);
+$_SESSION['musiques'] = array();
+    ?>
     <main>
         <div class="infosTitre">
             <div id="player">
@@ -42,6 +44,9 @@ $_SESSION['musiques'] = array();
                     <button type="button" id="envoyerReponse" onclick="return false">Envoyer</button>
                 </form>
             </div>
+            <form class="passer">
+                <button type="button" class="passer">Passer la musique</button>
+            </form>
         </div>
     </main>
 

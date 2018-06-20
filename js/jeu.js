@@ -4,15 +4,15 @@
     document.addEventListener("DOMContentLoaded", init);
 
     var tempsRestant = 45;
-    var IdMusique, 
-        NomMusique, 
-        NomAuteur, 
-        TexteATrous, 
-        IdParoles, 
-        nbPoints = 0, 
+    var IdMusique,
+        NomMusique,
+        NomAuteur,
+        TexteATrous,
+        IdParoles,
+        nbPoints = 0,
         nbMusiques = 0,
         audio = $("audio");
-    
+
     function demanderMusique() {
         var donneesPHPloc;
 
@@ -22,7 +22,8 @@
         //
         var oReq = new XMLHttpRequest(); //New request object
         oReq.onload = function () {
-            
+
+            console.log(this.responseText);
             //This is where you handle what to do with the response.
             //The actual data is found on this.responseText
 
@@ -42,7 +43,7 @@
             document.getElementById("titre").textContent = donneesPHPloc[1];
             document.getElementById("auteur").textContent = donneesPHPloc[2];
             document.getElementById("paroles").textContent = donneesPHPloc[4];
-//            document.getElementsByTagName("audio")[0].setAttribute("src", lienMusique);
+            //            document.getElementsByTagName("audio")[0].setAttribute("src", lienMusique);
             window.setTimeout(function () {
                 audio.play;
             }, 1000)
@@ -50,6 +51,9 @@
 
             //Récupérer les données PHP dans la variable globale
             donneesPHP = donneesPHPloc;
+            
+            // Permettre à l'utilisateur de passer
+            $("button.passer").click(passer);
         };
         oReq.open("post", "jeu_process.php", true);
         //                               ^ Don't block the rest of the execution.
@@ -63,8 +67,10 @@
 
     function init(evt) {
         
+        document.querySelector("button.passer").style.cursor = "pointer";
+
         $("#saisieUser").focus();
-            
+
         //Quand on clique sur le bouton
         $("#envoyerReponse").click(buttonCode);
 
@@ -72,7 +78,7 @@
         $("#formulaire").submit(function () {
             return false;
         });
-        
+
         demanderMusique();
 
         //Ajouter un écouteur qui vérifie si on presse une touche
@@ -80,7 +86,23 @@
 
         //Toutes les 1 sec, on appelle la fonction timer
         window.setInterval(timer, 1000);
+
+    }
+
+    function passer(e) {
+        var bouton = $("button.passer");
+        bouton.off("click", passer);
         
+        bouton.css("box-shadow", "inset 0 0 10px black");
+        window.setTimeout(function () {
+        bouton.css("box-shadow", "0 0 20px black");
+        },80);
+        tempsRestant = 45;
+        nbMusiques++;
+        audio.attr("src", "");
+        testerFin();
+        demanderMusique();
+
     }
 
     //
@@ -119,31 +141,31 @@
             type: 'post',
             url: 'jeu_process.php',
             data: {
-                saisieUser : saisieUtilisateur,
-                phrase : donneesPHP[4],
-                idParoles : donneesPHP[5],
-                motsCaches : donneesPHP[3],
+                saisieUser: saisieUtilisateur,
+                phrase: donneesPHP[4],
+                idParoles: donneesPHP[5],
+                motsCaches: donneesPHP[3],
             },
             success: function (data) {
                 //Récupérer les données traitées par PHP
                 var donneesPHPloc = data.split([";"]);
-                
+
                 //1 : Booléen indiquant la victoire ou non
                 //2 : Phrase completée
-                
+
                 $("#paroles").text(donneesPHPloc[1]);
-                
+
                 for (var elt of donneesPHPloc) {
-//                    alert(elt+"\n\n");
+                    //                    alert(elt+"\n\n");
                 }
-                
+
                 console.log(nbMusiques);
                 console.log(nbPoints);
 
                 if (donneesPHPloc[0] == "true") {
                     tempsRestant = 45;
-                    nbPoints ++;
-                    nbMusiques ++;
+                    nbPoints++;
+                    nbMusiques++;
                     audio.attr("src", "");
                     testerFin();
                     demanderMusique();
@@ -168,7 +190,7 @@
             tempsRestant++;
             audio.attr("src", "");
             tempsRestant = 45;
-            nbMusiques ++;
+            nbMusiques++;
             testerFin();
             demanderMusique();
         }
@@ -177,10 +199,10 @@
         tempsRestant = tempsRestant - 1;
 
     }
-    
+
     function testerFin() {
         if (nbMusiques == 10) {
-            $("main").append("<form id=\"envoyerScore\" action=\"score.php\" method=\"post\"><input type=\"hidden\" name=\"score\" value=\""+nbPoints+"\" /></form>")
+            $("main").append("<form id=\"envoyerScore\" action=\"score.php\" method=\"post\"><input type=\"hidden\" name=\"score\" value=\"" + nbPoints + "\" /></form>")
             $("#envoyerScore").submit();
         }
     }
@@ -188,7 +210,12 @@
     //
     //Cette fonction permet de mettre en forme un entier en secondes (ex : 60), sous la forme d'un timer (ex : 1:00)
     //
-    function stringTemps(temps) {
-        return Math.floor(temps / 60) + ":" + temps % 60;
+    function stringTemps(sec_num) {
+    var minutes = Math.floor(sec_num / 60);
+    var seconds = sec_num - (minutes * 60);
+
+    if (minutes < 10) {minutes = "0"+minutes;}
+    if (seconds < 10) {seconds = "0"+seconds;}
+    return minutes+':'+seconds;
     }
 }());
