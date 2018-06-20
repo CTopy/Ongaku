@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 31e2746... Début JS
 (function () {
     "use strict";
     $("document").ready(init);

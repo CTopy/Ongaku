@@ -7,33 +7,46 @@ $pdo = new PDO("mysql:host=".MYHOST.";dbname=".MYDB, MYUSER, MYPASS);
 $pdo->query("SET NAMES utf8");
 $pdo->query("SET CHARACTER SET 'utf-8'");
 ?>
+<!DOCTYPE HTML>
 
-    <!DOCTYPE HTML>
+<html lang="fr">
 
-    <html lang="fr">
+<head>
+    <title>Ongaku - Choix</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Choisir son Jeu, son style de musique et son language ">
+    <link rel="stylesheet" href="css/Choix.css" type="text/css" />
+    <link rel="stylesheet" href="css/styleGeneral.css" />
+</head>
 
-    <head>
-        <title>Ongaku - Choix</title>
-        <meta charset="utf-8">
-        <meta name="description" content="Choisir son Jeu, son style de musique et son language ">
-        <link rel="stylesheet" href="css/Choix.css" type="text/css" />
-        <link rel="stylesheet" href="css/styleGeneral.css" />
-    </head>
+<body>
+    <main>
+        <form method="post" action="jeu.php">
+            <h1>Choisissez votre mode de jeu</h1>
+            <div>
+                <div class="fieldset" id="jeu">
+                    <button type="button" class="up"></button>
+                    <h2>JEU</h2>
 
-    <body>
-        <main>
-            <form method="post">
-                <fieldset id="jeu">
-                    <legend>JEU</legend>
-                    <input id="classique" type="radio" name="jeu" value="classique" />
-                    <label for="classique">CLASSIQUE</label>
+                    <div class="checkbox">
+                        <input id="classique" type="radio" name="jeu" value="classique" />
+                        <label for="classique">CLASSIQUE
+                            
+                        </label>
+                    </div>
 
-                    <input id="chrono" type="radio" name="jeu" value="classique" />
-                    <label for="chrono">CHRONO</label>
-                </fieldset>
 
-                <fieldset id="style">
-                    <legend>STYLES</legend>
+                    <div class="checkbox">
+                        <input id="chrono" type="radio" name="jeu" value="classique" />
+                        <label for="chrono">CHRONO</label>
+                    </div>
+                    <button type="button" class="down"></button>
+                </div>
+
+                <div class="fieldset" id="style">
+                    <button type="button" class="up"></button>
+                    <h2>STYLES</h2>
+
                     <?php
           
                     //Demander la liste des styles à la base de donnée
@@ -53,11 +66,15 @@ $pdo->query("SET CHARACTER SET 'utf-8'");
                                                     $ligne = $resultats->fetch(PDO::FETCH_ASSOC); 
                     }
                     ?>
+                    <button type="button" class="down"></button>
+                    </div>
+                </div>
+            </div>
+            <div>
 
-                </fieldset>
-
-                <fieldset id="langue">
-                    <legend>LANGUE</legend>
+                <div class="fieldset" id="langue">
+                    <button type="button" class="up"></button>
+                    <h2>LANGUEs</h2>
 
                     <?php
           
@@ -80,15 +97,31 @@ $pdo->query("SET CHARACTER SET 'utf-8'");
                     }
                     $pdo = null;
                     ?>
-                </fieldset>
+                    <button type="button" class="down"></button>
+                </div>
+                <div class="fieldset" id="valider">
+                    <input type="image" src="medias/images/Elements/boutonChoix.png" height="300" width="300" alt="Valider" />
+                    <svg height="0" xmlns="http://www.w3.org/2000/svg">
+                        <filter id="drop-shadow">
+                            <feGaussianBlur in="SourceAlpha" stdDeviation="4" />
+                            <feOffset dx="12" dy="12" result="offsetblur" />
+                            <feFlood flood-color="rgba(0,0,0,0.5)" />
+                            <feComposite in2="offsetblur" operator="in" />
+                            <feMerge>
+                                <feMergeNode/>
+                                <feMergeNode in="SourceGraphic" />
+                            </feMerge>
+                        </filter>
+                    </svg>
+                </div>
+            </div>
 
-                <input type="image" src="medias/images/Elements/boutonChoix.png" height="300" width="300" alt="Valider" />
+        </form>
 
-            </form>
+    </main>
 
-        </main>
-        <script src="js/jeu.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/choix.js"></script>
+</body>
 
-    </html>
+</html>
